@@ -1,0 +1,205 @@
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial, sans-serif;
+    font-size: 15px;
+}
+
+
+h1, h2, h3, h4 {
+    color:#444;
+}
+
+h1 {
+    font-family: 'Crete Round', serif;
+    font-size:45px;
+    margin-bottom:3%;
+	margin-top:5%;
+}
+
+h2 {
+    font-size: 55px;
+}
+
+h3 {
+    font-size: 30px;
+	margin:3%;
+}
+
+h4 {
+    font-size:24px;
+}
+
+p {
+	font-size:20px;
+    color:#777;
+}
+
+ul {
+    list-style:none;
+}
+
+a {
+    text-decoration: none;
+    color:#444;
+}
+
+.orange {
+    color: #FF7A00;
+}
+
+.clear {
+    clear: both;
+}
+
+small {
+    font-size: 13px;
+    font-style: italic;
+    
+}
+
+.new {
+    font-size: 7px;
+    float: left;
+    color: #FF7A00;
+    
+}
+
+/* HEADER */
+header {
+    height: 120px;
+}
+
+header h1 {
+    float:left;
+    margin-top: 32px;
+}
+
+header nav {
+    margin-top: 50px;
+}
+
+header nav ul li {
+    float:left;
+    display: inline-block;
+}
+
+header nav ul li a {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: 12.5px;
+    
+}
+
+header nav ul li a:hover {
+    color: #ff7a00;
+}
+
+
+
+/*Corps*/
+
+img{
+	width:100%;
+	border-radius:3%;
+}
+
+.row{
+	margin: 5% 15%;
+}
+p{
+	text-align: justify;
+    text-justify: inter-word;
+}
+
+.insp{
+	margin-top:3%;
+	padding:0% 3%;
+}
+
+button{
+	margin: 2% 0% 0% 10%;
+}
+
+.imgbod{
+	padding:0%;
+}
+/* FOOTER */    
+
+footer {
+    height: 260px;
+    background-color: #444;
+}
+
+footer h1 {
+    color:#fff;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+    color: #777;
+}
+button:hover, img:hover{
+	opacity:0.8;
+	transition:0.7s;
+}
+
+#vague{
+     /* The image used */
+   background:url("../images/vague parallax.jpeg");
+
+	/* Set a specific height */
+	min-height: 500px;
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    padding:10% 0;
+}
+
+#paris{
+   /* The image used */
+   background:url("../images/paris parallax.jpg");
+
+	/* Set a specific height */
+	min-height: 500px;
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    padding:10% 0;
+}
+
+@media screen and (max-width: 991px){
+	button{
+		width:100%;
+		margin:0%;
+		background-color:red;
+	}
+	
+	p{
+		margin-top : 2%;
+	}
+	#corps{
+		margin-top:7%;
+	}
+}
+@media screen and (max-width: 1199px){
+	.row{
+	margin: 6% 8%;
+	}
+}
