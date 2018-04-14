@@ -2,12 +2,14 @@
 
 session_start ();
 
-if ((count($_GET)!=0) && !(isset($_GET['controle']) && isset ($_GET['action'])))
+if ((count($_GET)!=0) && !(isset($_GET['controle']) && isset ($_GET['action']))){
+		echo ('controle : ' . $controle . ' et <br/> action : ' . $action);
 		require ('./V/erreur404.tpl'); //cas d'un appel à index.php avec des paramètres incorrects
 		
+}
 else {
 
-	if ((! isset($_SESSION['profil'])) || count($_GET)==0)	{
+	if (count($_GET)==0)	{ //(! isset($_SESSION['profil'])) || 
 		$controle = "userController";   //cas d'une personne non authentifiée
 		$action=	"accueil";		//ou d'un appel à index.php sans paramètre
 	}
@@ -19,7 +21,12 @@ else {
 	}
 	//echo ('controle : ' . $controle . ' et <br/> action : ' . $action);	
 	require ('C/' . $controle . '.php');
-	$action ();
+	if(isset($_GET['path'])){
+		$action($_GET['path']);
+	}
+	else{
+		$action ();
+	}
 } 
 
 ?>

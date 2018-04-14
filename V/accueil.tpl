@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="CSS/bootstrap.min.css">
-		<link href="CSS/styles.css" rel="stylesheet">
+		<link href="V/CSS/styles.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -91,50 +91,7 @@
 	</head>
     
     <body>
-        <header class="row">
-            <div class="container-fluid "><!--wrapper-->
-			
-				<div class="col-md-1 col-ld-1 col-ms-12 col-xs-12">
-					<img id="logo" src="images/rose-des-vents.jpg" alt="Chania" width="90" height="90">
-				</div>
-				
-				<div class="col-md-3 col-ld-3 col-ms-12 col-xs-12">
-					<h1> Bon Voyage<span class="orange">.com</span></h1>
-				</div>
-                <nav class="col-md-7 col-lg-7 col-sm-12 hidden-xs" id="menu">
-                    <ul> 
-                        <li><a href="accueil.html"> Accueil</a></li>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="circuitcroisiere.html"> Circuits et croisières</a></li>
-						<li><a href="inspirations.html"> Inspirations</a></li>
-                        <li><a href="carteSVGResponsive.html"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
-                        <li><a href="#contact">Contact</a></li>
-						<li><a href="connexion.html">Connexion</a></li>
-                    </ul>
-                </nav>
-				<div class = "hidden-lg hidden-md hidden-sm col-xs-12" id="menuPetit">
-					<div class="dropdown">
-						<button class="btn btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> Menu
-						</button>
-						<ul class="dropdown-menu" id ="listePetite">
-							<li><a href="destinations.html"> Accueil</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="destinations.html">Destinations</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="circuitcroisiere.html"> Circuits et croisières</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="inspirations.html"> Inspirations</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="carteSVGResponsive.html"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#contact">Contact</a></li>
-							<li><a href="connexion.html">Connexion</a></li>
-						</ul>
-					</div>
-				</div>
-            </div>
-        </header>
+		<?php require("menu.html") ?>
         
 		<!--<div class="container-fluid">
 			<section class="container-fluid parallaxMainImage"> <!--id="main-image" class="container-fluid block"
@@ -161,7 +118,7 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="images/Danube/ringstrasse-naturhistorisches-museum-kunsthistorisches-museum-volksgarten-parlament-palais-epstein-40711-19to1.jpeg" alt="Chania" width="500" height="345">
+        <img src="V/images/Danube/ringstrasse-naturhistorisches-museum-kunsthistorisches-museum-volksgarten-parlament-palais-epstein-40711-19to1.jpeg" alt="Chania" width="500" height="345">
         <div class="carousel-caption">
           <h3>Evadez vous</h3>
           <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -169,7 +126,7 @@
       </div>
 
       <div class="item">
-        <img src="images/Norvege/sognefjord-norway.jpg" alt="Chania" width="500" height="345">
+        <img src="V/images/Norvege/sognefjord-norway.jpg" alt="Chania" width="500" height="345">
         <div class="carousel-caption">
           <h3>Liberez vous</h3>
           <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -177,7 +134,7 @@
       </div>
     
       <div class="item">
-        <img src="images/Egypte/B_1_philae1.jpg" alt="Flower" width="500" height="345">
+        <img src="V/images/Egypte/B_1_philae1.jpg" alt="Flower" width="500" height="345">
         <div class="carousel-caption">
           <h3>Voyagez l'esprit leger</h3>
           <p>Beatiful flowers in Kolymbari, Crete.</p>
@@ -185,7 +142,7 @@
       </div>
 
       <div class="item">
-        <img src="images/Danube/Austria_Lake_Mountains_464946.jpg" alt="Flower" width="500" height="345">
+        <img src="V/images/Danube/Austria_Lake_Mountains_464946.jpg" alt="Flower" width="500" height="345">
         <div class="carousel-caption">
           <h3>Flowers</h3>
           <p>Beatiful flowers in Kolymbari, Crete.</p>
@@ -211,17 +168,17 @@
         <section class="container-fluid block">
 			<div class="container" id="steps">
 			<div class="col-md-4 col-ld-4 col-ms-6 col-xs-12" id="step-1">
-				<img class="tete" src="images/steps-icon-1.png">
+				<img class="tete" src="V/images/steps-icon-1.png">
 				<h4>Planifier</h4>
 				<p>Envie de s'évader en famille ou entre amis ? Avec Bon Voyage vous trouverez la formule qui comblera vos attentes.</p>
             </div>
 			<div class="col-md-4 col-ld-4 col-ms-6 col-xs-12" id="step-2">
-				<img class="tete" src="images/steps-icon-2.png">
+				<img class="tete" src="V/images/steps-icon-2.png">
 				<h4>Organiser</h4>
 				<p>Ayez le privilège de bénéficier de l'expertise et de l'acompagnement de nos spécialistes pour chaque destination</p>
 			</div>
 			<div class="col-md-4 col-ld-4 col-ms-6 col-xs-12" id="step-3">
-				<img class="tete" src="images/steps-icon-3.png">
+				<img class="tete" src="V/images/steps-icon-3.png">
 				<h4>Voyager</h4>
                 <p>Voyager l'esprit leger ! Nous nous chargeons d'assurer votre sécurité et de veiller à votre pleine sérénité tout au long de votre voyage.</p>
 			</div>
