@@ -12,10 +12,11 @@ function accueil(){
 function displayReservation(){
 	//$_SESSION['user']="";
 	if(!isset($_SESSION['user']) || $_SESSION['user']==""){
-		displayConnection();
+		$_SESSION['nextPath'] = "ResGeorge";
+		displayConnection($path);
 	}
 	else
-		header('Location: V/ResGeorge.html');
+		require('V/ResGeorge.html');
 }
 
 function displayConnection(){
@@ -23,12 +24,27 @@ function displayConnection(){
 }
 
 function test(){
-	echo("It finally works");
+	//echo("It finally works");
 	require("M/user.php");
-	foreach($_POST as $key => $val) echo '$_POST["'.$key.'"]='.$val.'<br />';
+	//foreach($_POST as $key => $val) echo '$_POST["'.$key.'"]='.$val.'<br />';
 	$name = isset($_POST['name'])?$_POST['name']:"";
 	$pwd = isset($_POST['password'])?$_POST['password']:"";
 	login($name, $pwd);
+}
+
+function logout(){
+	$_SESSION['user']="";
+	require('V/accueil.tpl');
+}
+
+function displayPage($path){
+	require('V/' . $path . '.html');
+}
+
+function displayCountry(){
+	$country = $_GET['country'];
+	require('M/user.php');
+	getPage($country);
 }
 
 

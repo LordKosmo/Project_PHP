@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="CSS/hotelsParis.css" rel="stylesheet">
-	<link href="CSS/header.css" rel="stylesheet">
-	<link href="CSS/styles.css" rel="stylesheet">
+    <link href="V/CSS/hotelsParis.css" rel="stylesheet">
+	<link href="V/CSS/header.css" rel="stylesheet">
+	<link href="V/CSS/styles.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -26,10 +26,11 @@
 </head>
     
     <body>
-        <header class="row">
+	<?php require("menu.html"); ?>
+        <!--<header class="row">
             <div class="container-fluid "><!--wrapper-->
 			
-				<div class="col-md-1 col-ld-1 col-ms-12 col-xs-12">
+				<!--<div class="col-md-1 col-ld-1 col-ms-12 col-xs-12">
 					<img id="logo" src="images/rose-des-vents.jpg" alt="Chania" width="90" height="90">
 				</div>
 				
@@ -67,7 +68,7 @@
 					</div>
 				</div>
             </div>
-        </header>
+        </header>-->
         
 		<section id = "container">
 			<h3>Choisissez votre pays</h3>
@@ -82,19 +83,19 @@
 			-->
 			</section>
 				<div id = "images" class="row">
-					<a href = "hotelsParis.html" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="images/paris-image_121136222_125.jpg" class="img-responsive">
+					<a href = "index.php?controle=userController&action=displayPage&country=hotelsParis" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="V/images/paris-image_121136222_125.jpg" class="img-responsive">
 					<div class="caption">
 						<p>Les hôtels de Paris</p>
 					</div>
 					</a>
 					
-					<a href = "hotelsSidney.html" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="images/sydney-wallpaper-2216-2374-hd-wallpapers.jpg" class="img-responsive" >
+					<a href = "index.php?controle=userController&action=displayPage&country=hotelsSidney" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="V/images/sydney-wallpaper-2216-2374-hd-wallpapers.jpg" class="img-responsive" >
 					<div class="caption">
 						<p>Les hôtels de Sydney</p>
 					</div>
 					</a>
 					
-					<a href = "Saigon.html" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="images/499324.jpg" class="img-responsive" >
+					<a href = "index.php?controle=userController&action=displayPage&country=Saigon" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="V/images/499324.jpg" class="img-responsive" >
 					<div class="caption">
 						<p>Les hôtels de HoChiMinh</p>
 					</div>

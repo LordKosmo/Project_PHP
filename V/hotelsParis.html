@@ -5,8 +5,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link href="CSS/header.css" rel="stylesheet">
-	<link href="CSS/hotelsParis.css" rel="stylesheet">
+	<link href="V/CSS/header.css" rel="stylesheet">
+	<link href="V/CSS/hotelsParis.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
 	<script type="text/javascript" language="javascript">
 		$(document).scroll(function() {
@@ -25,10 +25,11 @@
 </head>
     
     <body>
-        <header class="row">
+		<?php require("menu.html"); ?>
+        <!--<header class="row">
             <div class="container-fluid "><!--wrapper-->
 			
-				<div class="col-md-1 col-ld-1 col-ms-12 col-xs-12">
+				<!--<div class="col-md-1 col-ld-1 col-ms-12 col-xs-12">
 					<img id="logo" src="images/rose-des-vents.jpg" alt="Chania" width="90" height="90">
 				</div>
 				
@@ -66,20 +67,20 @@
 					</div>
 				</div>
             </div>
-        </header>
+        </header>-->
         
 		<section id = "container">
 			<h3>Choisissez votre hôtel</h3>
 				
 			</section>
 				<div id = "images" class="row">
-					<a href = "Plaza.html" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="images/plaza1.jpg" class="img-responsive">
+					<a href = "index.php?controle=userController&action=displayPage&country=Plaza" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="V/images/plaza1.jpg" class="img-responsive">
 					<div class="caption">
 						<p>Le Plaza Athénée</p>
 					</div>
 					</a>
 					
-					<a href = "Georges.html" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="images/george.jpg" class="img-responsive" >
+					<a href = "index.php?controle=userController&action=displayPage&country=Georges" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="V/images/george.jpg" class="img-responsive" >
 					<div class="caption">
 						<p>Le George V</p>
 					</div>

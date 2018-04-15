@@ -21,8 +21,8 @@ else {
 	}
 	//echo ('controle : ' . $controle . ' et <br/> action : ' . $action);	
 	require ('C/' . $controle . '.php');
-	if(isset($_GET['path'])){
-		$action($_GET['path']);
+	if(isset($_GET['country'])){
+		$action($_GET['country']);
 	}
 	else{
 		$action ();

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="CSS/inspirations.css" rel="stylesheet">
+	<link href="CSS/header.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
+	<script type="text/javascript" language="javascript">
+		$(document).scroll(function() {
+			var y = $(document).scrollTop(),
+			header = $("#menuPetit");
+			if(y >= 110.5)  { //height de #logo + margin-top de#menuPetit
+				header.css({position: "fixed", "top" : "0", "left" : "0"});
+				document.getElementById("menuPetit").style.marginTop = "0px";
+			} else {
+			header.css("position", "relative");
+			document.getElementById("menuPetit").style.marginTop = "15px";
+			}
+		});
+		</script>
+    <title>Bon Voyage - Agence de Voyages en ligne</title>
+</head>
+    
+    <body>
+        <header class="row">
+            <div class="container-fluid "><!--wrapper-->
+			
+				<div class="col-md-1 col-ld-1 col-ms-12 col-xs-12">
+					<img id="logo" src="images/rose-des-vents.jpg" alt="Chania" width="90" height="90">
+				</div>
+				
+				<div class="col-md-3 col-ld-3 col-ms-12 col-xs-12">
+					<h1> Bon Voyage<span class="orange">.com</span></h1>
+				</div>
+                <nav class="col-md-7 col-lg-7 col-sm-12 hidden-xs" id="menu">
+                    <ul> 
+                        <li><a href="accueil.html"> Accueil</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="circuitcroisiere.html"> Circuits et croisières</a></li>
+						<li><a href="inspirations.html"> Inspirations</a></li>
+                        <li><a href="carteSVGResponsive.html"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+				<div class = "hidden-lg hidden-md hidden-sm col-xs-12" id="menuPetit">
+					<div class="dropdown">
+						<button class="btn btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> Menu
+						</button>
+						<ul class="dropdown-menu" id ="listePetite">
+							<li><a href="destinations.html"> Accueil</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="destinations.html">Destinations</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="circuitcroisiere.html"> Circuits et croisières</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="inspirations.html"> Inspirations</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="carteSVGResponsive.html"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+            </div>
+        </header>
+        
+        <div id="corps" class="container">  
+			<section class = "row">
+				<a class="col-md-6 imgbod" href="Top 9 des restaurants végétariens à Paris.html">
+				<img src="images/Inspiration-Paris.jpg" alt="Top 9 des restaurants végétariens à Paris.html" />
+				</a>
+				<p  class="col-md-6 insp" style="text-indent:5%">Manger végérien est de plus en plus populaire, à Paris comme ailleurs et les restaurants végétariens ont poussé comme des champignons (bio) à travers toute la capitale. Voici nos préférés...</p>
+				<a href ="Top 9 des restaurants végétariens à Paris.html"><button type="button" class="btn btn-secondary">Top restaurants végétariens à Paris</button>
+				</a>
+			</section> 
+			
+			 <section class = "row">			
+				<a class="col-md-6 imgbod" href="Les conseils de Lakey Peterson, surfeuse pro.html">
+				<img src="images/Inspiration-Surf.jpg" alt="Les conseils de Lakey Peterson" />
+				</a>
+				<p  class="col-md-6 insp" style="text-indent:5%">Lakey Peterson - l'une des meilleures surfeuses pro au monde - en pleine démonstration de surf au Swatch Women's Pro de l'ASP en Californie ...</p>
+				<a href ="Les conseils de Lakey Peterson, surfeuse pro.html"><button type="button" class="btn btn-secondary">Les conseils d'une surfeuse pro</button>
+				</a>
+			</section>     
+        </div>       
+			   
+        <footer>
+            <div class="wrapper"> 
+                <h1> Bon Voyage<span class="orange">.</span></h1>
+                
+                <div class="copyright">Copyright 2016. Tous droits réservés.
+                </div>
+            </div>
+        </footer>
+    </body>
+          
+</html>

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="CSS/bootstrap.min.css">
-		<link href="CSS/styles.css" rel="stylesheet">
+		<link href="V/CSS/styles.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -91,50 +91,7 @@
 	</head>
     
     <body>
-        <header class="row">
-            <div class="container-fluid "><!--wrapper-->
-			
-				<div class="col-md-1 col-ld-1 col-ms-12 col-xs-12">
-					<img id="logo" src="images/rose-des-vents.jpg" alt="Chania" width="90" height="90">
-				</div>
-				
-				<div class="col-md-3 col-ld-3 col-ms-12 col-xs-12">
-					<h1> Bon Voyage<span class="orange">.com</span></h1>
-				</div>
-                <nav class="col-md-7 col-lg-7 col-sm-12 hidden-xs" id="menu">
-                    <ul> 
-                        <li><a href="accueil.html"> Accueil</a></li>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="circuitcroisiere.html"> Circuits et croisières</a></li>
-						<li><a href="inspirations.html"> Inspirations</a></li>
-                        <li><a href="carteSVGResponsive.html"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
-                        <li><a href="#contact">Contact</a></li>
-						<li><a href="connexion.html">Connexion</a></li>
-                    </ul>
-                </nav>
-				<div class = "hidden-lg hidden-md hidden-sm col-xs-12" id="menuPetit">
-					<div class="dropdown">
-						<button class="btn btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> Menu
-						</button>
-						<ul class="dropdown-menu" id ="listePetite">
-							<li><a href="destinations.html"> Accueil</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="destinations.html">Destinations</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="circuitcroisiere.html"> Circuits et croisières</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="inspirations.html"> Inspirations</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="carteSVGResponsive.html"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#contact">Contact</a></li>
-							<li><a href="connexion.html">Connexion</a></li>
-						</ul>
-					</div>
-				</div>
-            </div>
-        </header>
+		<?php require("menu.html") ?>
         
 		<!--<div class="container-fluid">
 			<section class="container-fluid parallaxMainImage"> <!--id="main-image" class="container-fluid block"
@@ -161,7 +118,7 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="images/Danube/ringstrasse-naturhistorisches-museum-kunsthistorisches-museum-volksgarten-parlament-palais-epstein-40711-19to1.jpeg" alt="Chania" width="500" height="345">
+        <img src="V/images/Danube/ringstrasse-naturhistorisches-museum-kunsthistorisches-museum-volksgarten-parlament-palais-epstein-40711-19to1.jpeg" alt="Chania" width="500" height="345">
         <div class="carousel-caption">
           <h3>Evadez vous</h3>
           <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -169,7 +126,7 @@
       </div>
 
       <div class="item">
-        <img src="images/Norvege/sognefjord-norway.jpg" alt="Chania" width="500" height="345">
+        <img src="V/images/Norvege/sognefjord-norway.jpg" alt="Chania" width="500" height="345">
         <div class="carousel-caption">
           <h3>Liberez vous</h3>
           <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -177,7 +134,7 @@
       </div>
     
       <div class="item">
-        <img src="images/Egypte/B_1_philae1.jpg" alt="Flower" width="500" height="345">
+        <img src="V/images/Egypte/B_1_philae1.jpg" alt="Flower" width="500" height="345">
         <div class="carousel-caption">
           <h3>Voyagez l'esprit leger</h3>
           <p>Beatiful flowers in Kolymbari, Crete.</p>
@@ -185,7 +142,7 @@
       </div>
 
       <div class="item">
-        <img src="images/Danube/Austria_Lake_Mountains_464946.jpg" alt="Flower" width="500" height="345">
+        <img src="V/images/Danube/Austria_Lake_Mountains_464946.jpg" alt="Flower" width="500" height="345">
         <div class="carousel-caption">
           <h3>Flowers</h3>
           <p>Beatiful flowers in Kolymbari, Crete.</p>
@@ -211,17 +168,17 @@
         <section class="container-fluid block">
 			<div class="container" id="steps">
 			<div class="col-md-4 col-ld-4 col-ms-6 col-xs-12" id="step-1">
-				<img class="tete" src="images/steps-icon-1.png">
+				<img class="tete" src="V/images/steps-icon-1.png">
 				<h4>Planifier</h4>
 				<p>Envie de s'évader en famille ou entre amis ? Avec Bon Voyage vous trouverez la formule qui comblera vos attentes.</p>
             </div>
 			<div class="col-md-4 col-ld-4 col-ms-6 col-xs-12" id="step-2">
-				<img class="tete" src="images/steps-icon-2.png">
+				<img class="tete" src="V/images/steps-icon-2.png">
 				<h4>Organiser</h4>
 				<p>Ayez le privilège de bénéficier de l'expertise et de l'acompagnement de nos spécialistes pour chaque destination</p>
 			</div>
 			<div class="col-md-4 col-ld-4 col-ms-6 col-xs-12" id="step-3">
-				<img class="tete" src="images/steps-icon-3.png">
+				<img class="tete" src="V/images/steps-icon-3.png">
 				<h4>Voyager</h4>
                 <p>Voyager l'esprit leger ! Nous nous chargeons d'assurer votre sécurité et de veiller à votre pleine sérénité tout au long de votre voyage.</p>
 			</div>
@@ -317,9 +274,10 @@
   <path cc="lk" d="M680.54,308.05l0.25,2.72l0.25,1.98l-1.47,0.25l0.74,4.45l2.21,1.24l3.43-1.98l-0.98-4.69l0.25-1.73l-3.19-2.96L680.54,308.05L680.54,308.05z"/>
   <path cc="in" d="M670.98,313.01l4.58-2.24l2.72-9.84l-0.12-12.08l15.58-16.82v-3.99l3.21-1.25l-0.12-4.61l-3.46-6.73l1.98-3.61l4.33,3.99l5.56,0.25v2.24l-1.73,1.87l0.37,1l2.97,0.12l0.62,3.36h0.87l2.23-3.99l1.11-10.46l3.71-2.62l0.12-3.61l-1.48-2.87l-2.35-0.12l-9.2,6.08l0.58,3.91l-6.46-0.02l-2.28-2.79l-1.24,0.16l0.42,3.88l-13.97-1l-8.66-3.86l-0.46-4.75l-5.77-3.58l-0.07-7.37l-3.96-4.53l-9.1,0.87l0.99,3.96l4.46,3.61l-7.71,15.78l-5.16,0.39l-0.85,1.9l5.08,4.7l-0.25,4.75l-5.19-0.08l-0.56,2.36l4.31-0.19l0.12,1.87l-3.09,1.62l1.98,3.74l3.83,1.25l2.35-1.74l1.11-3.11l1.36-0.62l1.61,1.62l-0.49,3.99l-1.11,1.87l0.25,3.24L670.98,313.01L670.98,313.01z"/>
   <g cc="it">
-    <path d="M477.56,213.38l-2.65,1.34l0.35,5.17l2.12,0.36l1.59-1.52v-4.9L477.56,213.38L477.56,213.38z"/>
-    <path d="M472.27,196.98l-0.62,1.57l0.17,1.71l2.39,2.79l3.76-0.13l8.3,9.64l5.18,1.5l3.06,2.89l0.73,6.59l1.64-0.96l1.42-3.59l-0.35-2.58l2.43-0.22l0.35-1.46l-6.85-3.28l-6.5-6.39l-2.59-3.82l-0.63-3.63l3.31-0.79l-0.85-2.39l-2.03-1.71l-1.75-0.08l-2.44,0.67l-2.3,3.22l-1.39,0.92l-2.15-1.32L472.27,196.98L472.27,196.98z"/>
-    <path d="M492.44,223.02l-1.45-0.78l-4.95,0.78l0.17,1.34l4.45,2.24l0.67,0.73l1.17,0.17L492.44,223.02L492.44,223.02z"/>
+  <title>Italy</title>
+    <a href="index.php?controle=userController&action=displayCountry&country=sardaigne" TITLE="italy"> <path d="M477.56,213.38l-2.65,1.34l0.35,5.17l2.12,0.36l1.59-1.52v-4.9L477.56,213.38L477.56,213.38z"/></a>
+    <a href="index.php?controle=userController&action=displayCountry&country=sardaigne" TITLE="italy"><path d="M472.27,196.98l-0.62,1.57l0.17,1.71l2.39,2.79l3.76-0.13l8.3,9.64l5.18,1.5l3.06,2.89l0.73,6.59l1.64-0.96l1.42-3.59l-0.35-2.58l2.43-0.22l0.35-1.46l-6.85-3.28l-6.5-6.39l-2.59-3.82l-0.63-3.63l3.31-0.79l-0.85-2.39l-2.03-1.71l-1.75-0.08l-2.44,0.67l-2.3,3.22l-1.39,0.92l-2.15-1.32L472.27,196.98L472.27,196.98z"/></a>
+    <a href="index.php?controle=userController&action=displayCountry&country=sardaigne" TITLE="italy"><path d="M492.44,223.02l-1.45-0.78l-4.95,0.78l0.17,1.34l4.45,2.24l0.67,0.73l1.17,0.17L492.44,223.02L492.44,223.02z"/></a>
   </g>
   <path cc="mt" d="M492.61,230.47l-1.67,0.34l0.06,1.85l1.5,0.5l0.67-0.56L492.61,230.47L492.61,230.47z"/>
   <path cc="rw" d="M537.82,339.9l2.81,2.59l-0.12,2.77l-4.36,0.09v-3.06L537.82,339.9L537.82,339.9z"/>
@@ -360,8 +318,8 @@
   </g>
   <g cc="fr" >
 	<title>France</title>
-    <a href="hotelsParis.html" TITLE="france"><path class="dispo" d="M460.4,178.7l-2.21,0.54l-4.42,4.81l-1.33,0.09l-1.77-1.25l-1.15,0.27l-0.88,2.76l-6.46,0.18l0.18,1.43l4.42,2.94l5.13,4.1l-0.09,4.9l-2.74,4.81l5.93,2.85l6.02,0.18l1.86-2.14l3.8,0.09l1.06,0.98l3.8-0.27l1.95-2.5l-2.48-2.94l-0.18-1.87l0.53-2.05l-1.24-1.78l-2.12,0.62l-0.27-1.6l4.69-5.17v-3.12l-3.1-1.78l-1.59-0.27L460.4,178.7L460.4,178.7z"/></a>
-    <a href="hotelsParis.html" TITLE="france"><path class="dispo" d="M477.83,206.96l-1.95,1.96l-0.18,1.78l1.59,0.98l0.62-0.09l0.35-2.59L477.83,206.96L477.83,206.96z"/></a>
+    <a href="index.php?controle=userController&action=displayPage&country=hotelsParis" TITLE="france"><path class="dispo" d="M460.4,178.7l-2.21,0.54l-4.42,4.81l-1.33,0.09l-1.77-1.25l-1.15,0.27l-0.88,2.76l-6.46,0.18l0.18,1.43l4.42,2.94l5.13,4.1l-0.09,4.9l-2.74,4.81l5.93,2.85l6.02,0.18l1.86-2.14l3.8,0.09l1.06,0.98l3.8-0.27l1.95-2.5l-2.48-2.94l-0.18-1.87l0.53-2.05l-1.24-1.78l-2.12,0.62l-0.27-1.6l4.69-5.17v-3.12l-3.1-1.78l-1.59-0.27L460.4,178.7L460.4,178.7z"/></a>
+    <a href="index.php?controle=userController&action=displayPage&country=hotelsParis" TITLE="france"><path class="dispo" d="M477.83,206.96l-1.95,1.96l-0.18,1.78l1.59,0.98l0.62-0.09l0.35-2.59L477.83,206.96L477.83,206.96z"/></a>
   </g>
   <g cc="nz">
     <path d="M913.02,481.96l1.06,11.8l-1.42,5.36l-5.32,3.93l0.35,4.65v5l1.42,1.79l14.55-12.51v-2.86h-3.55l-4.97-16.8L913.02,481.96L913.02,481.96z"/>
@@ -369,8 +327,8 @@
   </g>
   <g cc="au">
     <title>Australie</title>
-    <a href="hotelsSidney.html" TITLE="france"><path class="dispo" d="M761.17,427.98l-0.35,25.38l-3.9,2.86l-0.35,2.5l5.32,3.57l13.13-2.5h6.74l2.48-3.58l14.9-2.86l10.64,3.22l-0.71,4.29l1.42,4.29l8.16-1.43l0.35,2.14l-5.32,3.93l1.77,1.43l3.9-1.43l-1.06,11.8l7.45,5.72l4.26-1.43l2.13,2.14l12.42-1.79l11.71-18.95l4.26-1.07l8.51-15.73l2.13-13.58l-5.32-6.79l2.13-1.43l-4.26-13.23l-4.61-3.22l0.71-17.87l-4.26-3.22l-1.06-10.01h-2.13l-7.1,23.59l-3.9,0.36l-8.87-8.94l4.97-13.23l-9.22-1.79l-10.29,2.86l-2.84,8.22l-4.61,1.07l-0.35-5.72l-18.8,11.44l0.35,4.29l-2.84,3.93h-7.1l-15.26,6.43L761.17,427.98L761.17,427.98z"/></a>    
-    <a href="hotelsSidney.html" TITLE="france"><path class="dispo" d="M825.74,496.26l-1.77,7.15l0.35,5l5.32-0.36l6.03-9.29L825.74,496.26L825.74,496.26z"/></a>
+    <a href="index.php?controle=userController&action=displayPage&country=hotelsSidney" TITLE="france"><path class="dispo" d="M761.17,427.98l-0.35,25.38l-3.9,2.86l-0.35,2.5l5.32,3.57l13.13-2.5h6.74l2.48-3.58l14.9-2.86l10.64,3.22l-0.71,4.29l1.42,4.29l8.16-1.43l0.35,2.14l-5.32,3.93l1.77,1.43l3.9-1.43l-1.06,11.8l7.45,5.72l4.26-1.43l2.13,2.14l12.42-1.79l11.71-18.95l4.26-1.07l8.51-15.73l2.13-13.58l-5.32-6.79l2.13-1.43l-4.26-13.23l-4.61-3.22l0.71-17.87l-4.26-3.22l-1.06-10.01h-2.13l-7.1,23.59l-3.9,0.36l-8.87-8.94l4.97-13.23l-9.22-1.79l-10.29,2.86l-2.84,8.22l-4.61,1.07l-0.35-5.72l-18.8,11.44l0.35,4.29l-2.84,3.93h-7.1l-15.26,6.43L761.17,427.98L761.17,427.98z"/></a>    
+    <a href="index.php?controle=userController&action=displayPage&country=hotelsSidney" TITLE="france"><path class="dispo" d="M825.74,496.26l-1.77,7.15l0.35,5l5.32-0.36l6.03-9.29L825.74,496.26L825.74,496.26z"/></a>
   </g>
   <g cc="fk">
     <path d="M307.95,508.18l-2.63-0.29l-2.62,1.76l1.9,2.06L307.95,508.18L307.95,508.18z"/>

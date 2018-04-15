@@ -1,0 +1,187 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<link href="CSS/Novotel Sydney Darling Harbour.css" rel="stylesheet">
+	<link href="CSS/header.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
+	<script type="text/javascript" language="javascript">
+		$(document).scroll(function() {
+			var y = $(document).scrollTop(),
+			header = $("#menuPetit");
+			if(y >= 105.5)  {
+				header.css({position: "fixed", "top" : "0", "left" : "0"});
+				document.getElementById("menuPetit").style.marginTop = "0px";
+			} else {
+			header.css("position", "relative");
+			document.getElementById("menuPetit").style.marginTop = "15px";
+			}
+		});
+	</script>
+		<style>
+			.carousel-inner > .item > img,
+			.carousel-inner > .item > a > img {
+				width: 100%;
+				height: 500px;
+				margin: auto;
+			}
+		</style>
+		<title>Bon Voyage - Agence de Voyages en ligne</title>
+		
+	</head>
+
+	<body>
+        <header class="row">
+            <div class="container-fluid "><!--wrapper-->
+			
+				<div class="col-md-1 col-ld-1 col-ms-12 col-xs-12">
+					<img id="logo" src="images/rose-des-vents.jpg" alt="Chania" width="90" height="90">
+				</div>
+				
+				<div class="col-md-3 col-ld-3 col-ms-12 col-xs-12">
+					<h1> Bon Voyage<span class="orange">.com</span></h1>
+				</div>
+                <nav class="col-md-7 col-lg-7 col-sm-12 hidden-xs" id="menu">
+                    <ul> 
+                        <li><a href="accueil.html"> Accueil</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="circuitcroisiere.html"> Circuits et croisières</a></li>
+						<li><a href="inspirations.html"> Inspirations</a></li>
+                        <li><a href="carteSVGResponsive.html"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+				<div class = "hidden-lg hidden-md hidden-sm col-xs-12" id="menuPetit">
+					<div class="dropdown">
+						<button class="btn btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> Menu
+						</button>
+						<ul class="dropdown-menu" id ="listePetite">
+							<li><a href="destinations.html"> Accueil</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="destinations.html">Destinations</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="circuitcroisiere.html"> Circuits et croisières</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="inspirations.html"> Inspirations</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="carteSVGResponsive.html"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+            </div>
+        </header>
+		
+		<div class="parallaxHarbour">
+			<h1>Novotel Sydney Darling Harbour</h1>
+		</div>
+		
+		<section class="container">
+			<div class="row">
+				<h1>Présentation de l'hôtel</h1>
+			</div>
+			
+			<!--ESSAI DU CAROUSSEL-->
+			<div class="col-sm-12 col-md-8">
+			<div class="thumbnail">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+
+						<div class="item active">
+							<img src="images/hSydney.jpg" alt="Chania" width="500" height="345">
+						</div>
+
+						<div class="item">
+							<img src="images/hSydneychambre.jpg" alt="Chania" width="500" height="345">
+						</div>
+
+						<div class="item">
+							<img src="images/hSydneysalon.jpg" alt="Flower" width="500" height="345">
+						</div>
+
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+			</div>
+			<!--FIN DE L'ESSAI-->
+			<div id ="desc">
+				<div class="col-sm-12 col-md-4 info">
+					<ul>
+						<li>100 Murray St, Pyrmont NSW 2009 | Sydney, Australie</li>
+						<li>1170€</li>
+						<li>8 jours / 7 nuits</li>
+						<li>vol compris</li>
+						<li>Au départ de Paris
+						le 21/10/2016</li>
+					</ul>
+				</div>
+			<div class="col-sm-12 col-md-4">
+				
+				<div class="thumbnail">
+					Situé à 3 minutes à pied du centre commercial Harbourside, le Novotel Sydney Darling Harbour possède des chambres spacieuses, dont certaines bénéficient d'une vue imprenable sur les toits de Sydney. Il dispose d'une salle de sport ainsi que d'une piscine et d''un court de tennis extérieurs. En outre, vous pourrez profiter de 30 minutes de connexion Wi-Fi gratuite dans le hall par appareil et par jour.</br>
+					<button type="button" class="btn btn-default"><a href="#" class="button-1">Réserver</a></button>
+					
+				</div>
+			</div>
+			</div>
+			
+			<div class="row">
+				
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>Chambres</h3>
+					Chacune des confortables chambres modernes du Darling Harbour Novotel est équipée d'une télévision par câble à écran plat avec différents films. Un service d'étage est assuré 24h/24.<br />
+					Le restaurant Ternary vous accueillera dans une atmosphère chic décontractée. Dans cet espace décloisonné accueillant, vous aurez la possibilité d'apprécier 3 offres uniques de la cuisine grill, des plats asiatiques ou des mets du bar à vins.
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>Loisirs</h3>
+					Le Novotel Sydney Darling Harbour se trouve à quelques pas des principales attractions de Darling Harbour, et notamment du zoo Wildlife, de l'aquarium Sea Life de Sydney ainsi que du musée national de la marine. Il est situé à côté de la gare Convention, qui offre plusieurs solutions de transports pour se déplacer dans la ville. Le centre-ville de Sydney vous attendra à seulement 15 minutes de marche.</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="col-xs-12 col-md-9">
+					<h3>Quartier</h3>
+						Ce quartier (Quartier central des affaires de Sydney) est un choix idéal pour les voyageurs qui s'intéressent à ces thèmes : le shopping, la nourriture et les restaurants.</div>
+				</div>
+			</div>
+			
+		</section>
+		
+		<footer>
+            <div class="wrapper"> 
+                <h1 class="col-md-12 col-lg-12 col-sm-12 col-xs-12"> Bon Voyage<span class="orange">.</span></h1>
+                
+                <div class="copyright" class="col-md-8 col-lg-8 col-sm-12 col-xs-12">Copyright © 2017. Tous droits réservés.
+                </div>
+            </div>
+        </footer>
+	</body>
+</html>

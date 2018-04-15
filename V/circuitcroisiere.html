@@ -1,12 +1,12 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+		<link rel="stylesheet" href="V/CSS/bootstrap.min.css">
 		<!--<link href="CSS/styles.css" rel="stylesheet">-->
-		<link href="CSS/hotelsParis.css" rel="stylesheet">
-		<link href="CSS/header.css" rel="stylesheet">
+		<link href="V/CSS/hotelsParis.css" rel="stylesheet">
+		<link href="V/CSS/header.css" rel="stylesheet">
 		
-		<link href="CSS/styles.css" rel="stylesheet">
+		<link href="V/CSS/styles.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -28,10 +28,11 @@
 	</head>
 
 	<body>
-        <header class="row">
+	<?php require("menu.html"); ?>
+        <!--<header class="row">
             <div class="container-fluid "><!--wrapper-->
 			
-				<div class="col-md-1 col-ld-1 col-ms-12 col-xs-12">
+				<!--<div class="col-md-1 col-ld-1 col-ms-12 col-xs-12">
 					<img id="logo" src="images/rose-des-vents.jpg" alt="Chania" width="90" height="90">
 				</div>
 				
@@ -69,20 +70,20 @@
 					</div>
 				</div>
             </div>
-        </header>
+        </header>-->
 		
 		<section id = "container">
 			<h3>Choisissez votre voyage</h3>
 				
 			</section>
 				<div id = "images" class="row">
-					<a href = "circuit.html" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="images/Norvege/Bay-Fjord-Norway-forest-river-mountains-clouds_1600x1200.jpg" class="img-responsive">
+					<a href = "index.php?controle=userController&action=displayPage&country=circuit" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="V/images/Norvege/Bay-Fjord-Norway-forest-river-mountains-clouds_1600x1200.jpg" class="img-responsive">
 					<div class="caption">
 						<p>Circuits</p>
 					</div>
 					</a>
 					
-					<a href = "croisiere.html" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="images/Egypte/578.jpg" class="img-responsive" >
+					<a href = "index.php?controle=userController&action=displayPage&country=croisiere" class="col-md-6 col-lg-6 col-sm-12 col-xs-12"><img src="V/images/Egypte/578.jpg" class="img-responsive" >
 					<div class="caption">
 						<p>Croisières</p>
 					</div>
