@@ -84,7 +84,15 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `lastname`, `firsname`, `email`, `login_user`, `pass`) VALUES
 (1, 'DOS SANTOS', 'Julien', 'julien.dossantos@gmail.com', 'DOSSANTOS1', 'jdetu1'),
-(2, 'TABARE', 'Rubin', 'rubin.tabare@gmail.com', 'TABARE1', 'rtetu2');
+(2, 'TABARE', 'Ruben', 'ruben.tabare@gmail.com', 'TABARE1', 'rtetu2'),
+(3, 'WANG', 'Antoine', 'AntoineWang@gmail.com', 'WANG1', 'waetu1'),
+(4, 'BUGIELSKI', 'Alexis', 'AlexisBugielski@gmail.com', 'BUGIELSKI1', 'baetu1'),
+(5, 'MONET', 'Gregoire', 'GregoireMonet@gmail.com', 'MONET1', 'gmetu1'),
+(6, 'WRIGHT', 'Bill', 'BillWright@gmail.com', 'WRIGHT1', 'bwetu1'),
+(7, 'ZUKERBERG', 'MARK', 'MarkZukerberg@gmail.com', 'WRIGHT1', 'mzetu1'),
+(8, 'CARON', 'Fabien', 'FabienCaron@gmail.com', 'CARON1', 'caetu1'),
+(9, 'CRESP', 'Vincent', 'VincentCresp@gmail.com', 'CRESP1', 'cvetu1'),
+(10, 'ASIMOV', 'Isaac', 'IsaacAsimovp@gmail.com', 'CRESP1', 'cvetu1');
 
 --
 -- Index pour les tables exportées
