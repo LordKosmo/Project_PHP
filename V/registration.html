@@ -24,7 +24,7 @@
 		
 		function validName(){
 			var a = document.getElementById("name");
-			if(a.innerHTML==""){
+			if(a.innerHtml()==""){
 				a.css({boderColor: "red"});
 			}
 		}
@@ -101,21 +101,24 @@
         <?php require("menu.html"); ?>
 		
 		<section class="container-fluid contact">
-			<form method="post" action="index.php?controle=userController&action=test">
+			<form method="post" action="index.php?controle=userController&action=register">
 				<div class="col-ld-12 col-md-12 col-ms-12 col-xs-12">
 					<input type="text" name="name" id="name" placeholder="Name" onchange="validName()">
 					<input type="password" name="password" id="password" placeholder="Password" >
+					<input type="password" name="validatePassword" id="validatePassword" placeholder="Validate Password" >
 				</div>
 				<!--<label for="email">Email</label>-->
 				<!--<div class="col-ld-6 col-md-6 col-ms-12 col-xs-12">
+					<input type="password" name="password" id="password" placeholder="Password" >
+					<input type="password" name="validatePassword" id="validatePassword" placeholder="Validate Password" >
+				</div>
+				<div class="col-ld-6 col-md-6 col-ms-12 col-xs-12">
+					<input type="password" name="validatePassword" id="validatePassword" placeholder="Validate Password" >
 				</div>-->
 				<div class="col-ld-12 col-md-12 col-ms-12 col-xs-12">
 					<input type="submit" class="button-3" value="Submit">
 				</div>
 			</form>
-			<div class="col-ld-12 col-md-12 col-ms-12 col-xs-12">
-				<a href="index.php?controle=userController&action=displayPage&country=registration"><button  class="button-3">Register</button></a>
-			</div>
 		</section>
 
         <footer>

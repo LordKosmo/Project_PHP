@@ -34,25 +34,22 @@
 			<form method="post" action="index.php?controle=userController&action=accueil">
 				<div class = "row">
 					<div class="col-md-6 col-lg-6 col-sm-8 col-xs-12">
-						<img src = "V/images/georgesV.jpg" class="img-responsive"/>
+						<?php
+						if(isset($picture))
+							echo('<img src = "' . $picture . '" class="img-responsive"/>');
+						else
+							echo('<img src = "V/images/georgesV.jpg" class="img-responsive"/>');
+						?>
 					</div>
 					<div class="col-md-6 col-lg-6 col-sm-4 col-xs-12"id ="desc" >
-						<ul><h3>Reservation Hôtel George V</h3></ul>
-						<div class="form-group row"> 
-							<div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
-							Nombre de chambres<input class="form-control" type="text" value="Nombre de chambres" id="f1">
-							</div>
-						</div>
-						<div class="form-group row"> 
-							<div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
-							Nombre de nuits<input class="form-control" type="text" id="example-text-input">
-							</div>
-						</div>		
-						<div class="form-group row"> 
-							<div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
-								Adresse mail<input class="form-control" type="mail" id="example-text-input">
-							</div>
-						</div>
+						<?php
+						if(isset($travel))
+							echo('<ul><h3>Reservation ' . $travel . '</h3></ul>');
+						else
+							echo('<ul><h3>Reservation Hôtel George V</h3></ul>');
+						?>
+						Nombre de chambres<input type="text" value="" id="f1">
+						Nombre de nuits<input type="text" id="example-text-input">
 						<div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3" id = "bouton">
 							<input class="form-control" type="submit" value="Réserver" onclick="alert('Your reservation has been sent')">
 						</div>
@@ -63,28 +60,6 @@
 				</div>
 			</form>
 		</section>
-		<!--
-		<section class="container">
-			<div class="form-group row"> 
-			  <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
-				Nombre de chambres<input class="form-control" type="text" value="Nombre de chambres" id="f1">
-			  </div>
-			</div>
-			<div class="form-group row"> 
-			  <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
-				Nombre de nuits<input class="form-control" type="text" id="example-text-input">
-			  </div>
-			</div>		
-			<div class="form-group row"> 
-			  <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
-				Adresse mail<input class="form-control" type="mail" id="example-text-input">
-			  </div>
-			</div>
-			<div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3" id = "bouton">
-				<input class="form-control" type="submit" value="Réserver">
-			</div>
-		</section>
-		-->
 		<footer>
             <div class="wrapper"> 
                 <h1 class="col-md-12 col-lg-12 col-sm-12 col-xs-12"> Bon Voyage<span class="orange">.</span></h1>

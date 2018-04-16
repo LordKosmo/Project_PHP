@@ -393,7 +393,7 @@ label {
 }
 
 input[type="text"], input[type="password"] {
-	width:90%;
+	width:50%;
 	height:40px;
 	display:block;
 	margin:auto;

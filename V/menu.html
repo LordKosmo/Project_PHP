@@ -10,16 +10,16 @@
 				</div>
                 <nav class="col-md-7 col-lg-7 col-sm-12 hidden-xs" id="menu">
                     <ul> 
-                        <li><a href="index.php?controle=userController&action=displayPage&country=accueil"> Accueil</a></li>
+                        <li><a href="index.php?controle=userController&action=displayPage&country=accueil"> Home</a></li>
                         <li><a href="index.php?controle=userController&action=displayPage&country=destinations">Destinations</a></li>
-                        <li><a href="index.php?controle=userController&action=displayPage&country=circuitcroisiere"> Circuits et croisières</a></li>
-                        <li><a href="index.php?controle=userController&action=displayPage&country=carteSVGResponsive"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
+                        <li><a href="index.php?controle=userController&action=displayPage&country=circuitcroisiere"> Circuits and cruises</a></li>
+                        <li><a href="index.php?controle=userController&action=displayPage&country=carteSVGResponsive"> <span class ="new"> new !</span> Interactive map</a></li>
                         <?php if (!isset($_SESSION['user']) || $_SESSION['user'] == ""){ 
-								echo('<li><a href="V/connexion.html">Connexion</a></li>');
+								echo('<li><a href="index.php?controle=userController&action=displayConnection">Login</a></li>');
 								//echo('<li><a href="V/connexion.html">' . $_SESSION['user'] . '</a></li>');
 							} 
 							else{
-								echo('<li><a href="index.php?controle=userController&action=logout">Déconnexion</a></li>');
+								echo('<li><a href="index.php?controle=userController&action=logout">Logout</a></li>');
 							}
 						?>
                     </ul>
@@ -30,20 +30,20 @@
 							<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> Menu
 						</button>
 						<ul class="dropdown-menu" id ="listePetite">
-							<li><a href="index.php?controle=userController&action=displayPage&country=accueil"> Accueil</a></li>
+							<li><a href="index.php?controle=userController&action=displayPage&country=accueil"> Home</a></li>
 							<li role="separator" class="divider"></li>
 							<li><a href="index.php?controle=userController&action=displayPage&country=destinations">Destinations</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="index.php?controle=userController&action=displayPage&country=circuitcroisiere"> Circuits et croisières</a></li>
+							<li><a href="index.php?controle=userController&action=displayPage&country=circuitcroisiere"> Circuits and cruises</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="index.php?controle=userController&action=displayPage&country=carteSVGResponsive"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
+							<li><a href="index.php?controle=userController&action=displayPage&country=carteSVGResponsive"> <span class ="new"> nouveau !</span> Interactive map</a></li>
 							<li role="separator" class="divider"></li>
 							<?php if (!isset($_SESSION['user']) || $_SESSION['user'] == ""){ 
-								echo('<li><a href="V/connexion.html">Connexion</a></li>');
+								echo('<li><a href="index.php?controle=userController&action=displayConnection">Login</a></li>');
 								//echo('<li><a href="V/connexion.html">' . $_SESSION['user'] . '</a></li>');
 							} 
 							else{
-								echo('<li><a href="index.php?controle=userController&action=logout">Déconnexion</a></li>');
+								echo('<li><a href="index.php?controle=userController&action=logout">Logout</a></li>');
 							}
 						?>
 						</ul>

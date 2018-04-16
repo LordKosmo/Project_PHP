@@ -25,14 +25,49 @@ function login($name, $password){
 			}
 			else{
 				//echo ("Wrong password");
-				header('Location: V/connexion.html');
+				require('V/connexion.html');
 			}
 		}
 	}
 	else{
 		//echo ("Name or password invalid");
-		header('Location: V/connexion.html');
+		require('V/connexion.html');
 	}
+}
+
+function registerUser($name, $password){
+	$host = "localhost";
+	$user = "root";
+	$pwd = "";
+	$db = "labphp";
+	$link = mysqli_connect($host, $user, $pwd, $db);
+	$req = "insert into users (name, pwd) values ('" . $name . "', '" . crypt($password,"rl") . "')";
+	$res = mysqli_query($link, $req);
+	require('V/connexion.html');
+	/*if($data = mysqli_fetch_assoc($res)){
+		if($data > 0){
+			if($data['pwd'] == crypt($password, "rl")){
+				$_SESSION['user'] = $data['name'];
+				//echo ("Welcome ". $_SESSION['user']);
+				if(isset($_SESSION['nextPath']) && $_SESSION['nextPath'] != ""){
+					$path = $_SESSION['nextPath'];
+					$_SESSION['nextPath'] = "";
+					require('V/' . $path . '.html');
+				}
+				else{
+					require('V/accueil.html');
+				}
+			}
+			else{
+				//echo ("Wrong password");
+				require('V/connexion.html');
+			}
+		}
+	}
+	else{
+		//echo ("Name or password invalid");
+		require('V/connexion.html');
+	}*/
 }
 
 function getPage($country){

@@ -13,14 +13,26 @@ function displayReservation(){
 	//$_SESSION['user']="";
 	if(!isset($_SESSION['user']) || $_SESSION['user']==""){
 		$_SESSION['nextPath'] = "ResGeorge";
-		displayConnection($path);
+		displayConnection();
 	}
 	else
 		require('V/ResGeorge.html');
 }
 
 function displayConnection(){
-	header('Location: V/connexion.html');
+	require('V/connexion.html');
+}
+
+function register(){
+	require("M/user.php");
+	//foreach($_POST as $key => $val) echo '$_POST["'.$key.'"]='.$val.'<br />';
+	$name = isset($_POST['name'])?$_POST['name']:"";
+	$pwd = isset($_POST['password'])?$_POST['password']:"";
+	$vpwd = isset($_POST['validatePassword'])?$_POST['validatePassword']:"";
+	if($pwd==$vpwd)
+		registerUser($name, $pwd);
+	else
+		require('V/registration.html');
 }
 
 function test(){
