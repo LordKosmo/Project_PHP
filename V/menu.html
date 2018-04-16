@@ -13,7 +13,6 @@
                         <li><a href="index.php?controle=userController&action=displayPage&country=accueil"> Accueil</a></li>
                         <li><a href="index.php?controle=userController&action=displayPage&country=destinations">Destinations</a></li>
                         <li><a href="index.php?controle=userController&action=displayPage&country=circuitcroisiere"> Circuits et croisières</a></li>
-						<li><a href="index.php?controle=userController&action=displayPage&country=inspirations"> Inspirations</a></li>
                         <li><a href="index.php?controle=userController&action=displayPage&country=carteSVGResponsive"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
                         <?php if (!isset($_SESSION['user']) || $_SESSION['user'] == ""){ 
 								echo('<li><a href="V/connexion.html">Connexion</a></li>');
@@ -37,14 +36,16 @@
 							<li role="separator" class="divider"></li>
 							<li><a href="index.php?controle=userController&action=displayPage&country=circuitcroisiere"> Circuits et croisières</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="index.php?controle=userController&action=displayPage&country=inspirations"> Inspirations</a></li>
-							<li role="separator" class="divider"></li>
 							<li><a href="index.php?controle=userController&action=displayPage&country=carteSVGResponsive"> <span class ="new"> nouveau !</span> Carte interactive</a></li>
+							<li role="separator" class="divider"></li>
 							<?php if (!isset($_SESSION['user']) || $_SESSION['user'] == ""){ 
-								echo('<li role="separator" class="divider"></li>');
-								echo('<li><a href="index.php?controle=userController&action=displayPage&country=connexion">Connexion</a></li>');
+								echo('<li><a href="V/connexion.html">Connexion</a></li>');
 								//echo('<li><a href="V/connexion.html">' . $_SESSION['user'] . '</a></li>');
-							 } ?>
+							} 
+							else{
+								echo('<li><a href="index.php?controle=userController&action=logout">Déconnexion</a></li>');
+							}
+						?>
 						</ul>
 					</div>
 				</div>
