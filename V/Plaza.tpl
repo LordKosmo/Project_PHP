@@ -43,25 +43,25 @@
 	<hr/>
 	<div class="row">
 		<div class="col-xs-12">
-			<h3>Restaurant gastronomique</h3>
-			Pour une expérience gastronomique inoubliable, rendez vous au restaurant Le Cinq, qui dans un cadre gris et doré
-			offrant une très belle vue du jardin de l'hôtel. Il propose une cuisine sachant innover tout en respectant
-			les techniques de tradition Française. Le Cinq a obtenu le rare privilège de se voir attribuer deux étoiles
-			au guide Michelin. Il sert le petit-déjeuner de 7h à 10h, et jusqu'à 10h30 le week-end; le déjeuner de 12h30 à 14h30, et le dîner de 19h à 22h30.
+			<h3> Gourmet restaurant </h3>
+			For an unforgettable gastronomic experience, go to the restaurant Le Cinq, which in a gray and golden setting
+			offering a beautiful view of the hotel garden. He proposes a kitchen that knows how to innovate while respecting
+			the techniques of French tradition. The Five has earned the rare privilege of being awarded two stars
+			in the Michelin guide. It serves breakfast from 07:00 to 10:00, and until 10:30 at weekends; lunch from 12:30 to 14:30, and dinner from 19:00 to 22:30.
 		</div>
 	</div>
 	<hr/>
 	<div class="row">
 		<div class="col-xs-12 col-md-9">
-			<h3>Service d'étage</h3>
-			Et bien entendu, le room-service est disponible 24h/24 pour porter un large choix de délicieux mets, du plat gastronomique au hamburger frites. La carte du petit-déjeuner 
-			est servie de 6h à 11h30, et a la particularité de proposer également une version japonaise.
+			<h3> Room service </h3>
+			And of course, the room service is available 24 hours a day to carry a wide choice of delicious dishes, from gourmet dishes to hamburger fries. The breakfast menu
+			is served from 6h to 11h30, and has the particularity to also offer a Japanese version.
 		</div>
 		<div class="col-xs-12 col-md-3">
 			<div class="thumbnail">
-				<img src="images/Plaza/service.jpg" alt="...">
+				<img src="V/images/Plaza/service.jpg" alt="...">
 				<div class="caption">
-					<p>La conciergerie du Plaza</p>
+					<p>The concierge of the Plaza</p>
 				</div>
 			</div>
 		</div>
@@ -69,15 +69,15 @@
 	<hr/>
 	<div class="row">
 		<div class="col-xs-12 col-md-9 col-md-push-3">
-			<h3>Bar</h3>
-			L'Hôtel Four Seasons George V dispose également d'un bar, tout simplement nommé Le Bar, jouissant d'une atmosphère chaleureuse
-			et animée. Il vous accueille chaque jour de 10h à 1h30, et jusqu'à 	2h30 les vendredis et samedis soir.
+			<h3> bar </h3>
+			The Four Seasons Hotel George V also has a bar, simply named The Bar, enjoying a cozy atmosphere
+			and animated. It is open daily from 10am to 1:30 am, and until 2:30 on Fridays and Saturdays.
 		</div>
 		<div class="col-xs-12 col-md-3 col-md-pull-9">
 			<div class="thumbnail">
-				<img src="images/Plaza/bar.jpg" alt="...">
+				<img src="V/images/Plaza/bar.jpg" alt="...">
 				<div class="caption">
-					<p>Le bar de l'hôtel</p>
+					<p>The hotel bar</p>
 				</div>
 			</div>
 		</div>
@@ -85,18 +85,18 @@
 	<hr/>
 	<div class="row">
 		<div class="col-xs-12">
-			<h3>Centre de remise en forme</h3>
-			La présentation du George V serait incomplète sans vous parler de son centre de remise en forme. D'une surface de 744m2, 
-			il comprend une salle de fitness, un sauna, un hammam, et un spa. Pour couronner le tout, une piscine et un bain à remous vous y attendent.
+			<h3> Fitness Center </h3>
+			The presentation of the George V would be incomplete without telling you about his fitness center. With a surface of 744m2,
+			it includes a gym, sauna, steam room, and spa. To top it off, a swimming pool and a hot tub await you.
 		</div>
 	</div>
 	<hr/>
 	<div class="row">
 		<div class="col-xs-12">
-			<h3>Services haut de gamme</h3>
-			On pourrait écrire encore beaucoup sur tous les services proposés par l'Hôtel George V, mais vous pouvez en retenir ceci : habitué depuis
-			toujours à la clientèle la plus exigeante, mettant à votre 
-			disposition le personnel le plus aguerri, Le George V représente tout ce que vous pouvez en attendre, et plus encore.
+			<h3> High-end services </h3>
+			We could still write a lot about all the services offered by the Hotel George V, but you can remember this: accustomed since
+			always the most demanding customer, putting in your
+			available the most seasoned staff, the George V is everything you can expect, and more.
 		</div>
 	</div>
 </div>
