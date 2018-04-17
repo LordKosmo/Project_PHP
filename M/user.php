@@ -12,7 +12,7 @@ function login($login_user, $password){
 	echo(crypt($password,"rl"));
 	$link = connect();
 	//echo($login_user);
-	$req = "select id_user, login_user, pass from user where login_user='$login_user'";
+	$req = "select id_user, login_user, pass, admin from user where login_user='$login_user'";
 	echo($req);
 	$res = mysqli_query($link, $req);
 
@@ -23,7 +23,11 @@ function login($login_user, $password){
 			if($data['pass'] == crypt($password, "rl")){
 
 				$_SESSION['user'] = $data['id_user'];
-				//echo ("Welcome ". $_SESSION['user']);
+				if($data['admin']!=null)
+					$_SESSION['admin']=$data['admin'];
+				else
+					$_SESSION['admin']="";
+				echo ("Welcome ". $data['admin']);
 				if(isset($_SESSION['nextPath']) && $_SESSION['nextPath'] != ""){
 					$path = $_SESSION['nextPath'];
 					$_SESSION['nextPath'] = "";
@@ -135,5 +139,12 @@ function getUserReservation(){
 		$i++;
 	}
 	return $reserve;
+}
+
+function deleteUserReservation($idres){
+	$link = connect();
+	$req = "delete from reserve where id_res=" . $idres;
+	echo($req);
+	$res = mysqli_query($link, $req);
 }
 ?>

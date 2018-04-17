@@ -42,6 +42,7 @@ function register(){
 }
 function logout(){
 	$_SESSION['user']="";
+	$_SESSION['admin']="";
 	require('V/accueil.tpl');
 }
 
@@ -95,6 +96,14 @@ function getReservation(){
 	require("M/user.php");
 	$reserve = getUserReservation();
 	require("V/admin.html");
+}
+
+function deleteReservation($path){
+	echo("PATH=" . $path);
+	require("M/user.php");
+	//$idres = isset($_POST['id'])?$_POST['id']:"";
+	deleteUserReservation($path);
+	require("V/accueil.html");
 }
 
 ?>

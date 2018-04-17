@@ -21,8 +21,10 @@
 							else{
 								echo('<li><a href="index.php?controle=userController&action=logout">Logout</a></li>');
 							}
+							if(isset($_SESSION['admin']) && $_SESSION['admin']!="")
+								echo('<li><a href="index.php?controle=userController&action=getReservation"> Admin</a></li>');
 						?>
-						<li><a href="index.php?controle=userController&action=getReservation"> Admin</a></li>
+						
                     </ul>
                 </nav>
 				<div class = "hidden-lg hidden-md hidden-sm col-xs-12" id="menuPetit">
