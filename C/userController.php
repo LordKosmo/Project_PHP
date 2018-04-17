@@ -84,4 +84,9 @@ function reserve(){
 	//require("V/accueil.htlm");
 }
 
+function getReservation(){
+	require("M/user.php");
+	getUserReservation();
+}
+
 ?>

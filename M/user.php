@@ -109,4 +109,8 @@ function getPictures($country){
 	$_SESSION['travelPicture'] = $pictures[0];
 	return $pictures;
 }
+
+function getUserReservation(){
+	
+}
 ?>
