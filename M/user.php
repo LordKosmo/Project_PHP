@@ -56,9 +56,10 @@ function connect(){
 
 function reserveBDD($id_user,$id_travel,$datebeg,$dateend){
 	echo("Salut je fais la requete");
+	echo($id_travel);
 	$link = connect();
-//	$req = "insert into reserve(id_user,id_travel,date_res) values ('"$id_user . "','" .$id_travel  . "','" $datebeg."','" $dateend"')";
-//	$res = mysqli_query($link,$res);
+	$req = "insert into reserve(id_user,id_travel,datebeg,dateend) values ('" .$id_user ."','" .$id_travel  . "','". $datebeg."','" .$dateend . "')";
+	$res = mysqli_query($link,$req);
 }
 
 function registerUser($name, $password){
