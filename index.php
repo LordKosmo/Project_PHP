@@ -1,7 +1,7 @@
 <?php
 
 session_start ();
-$_SESSION['user'] = "bla";
+
 if ((count($_GET)!=0) && !(isset($_GET['controle']) && isset ($_GET['action']))){
 		echo ('controle : ' . $controle . ' et <br/> action : ' . $action);
 		require ('./V/erreur404.tpl'); //cas d'un appel à index.php avec des paramètres incorrects

@@ -56,8 +56,9 @@ function connect(){
 
 function reserveBDD($id_user,$id_travel,$datebeg,$dateend){
 	echo("Salut je fais la requete");
+	echo($id_travel);
 	$link = connect();
-//	$req = "insert into reserve(id_user,id_travel,date_res) values ('"$id_user . "','" .$id_travel  . "','" $datebeg."','" $dateend"')";
+	$req = "insert into reserve(id_user,id_travel,date_res) values ('" .$id_user ."','" .$id_travel  . "','". $datebeg."','" .$dateend . "')";
 //	$res = mysqli_query($link,$res);
 }
 
@@ -88,7 +89,7 @@ function getPage($country){
 	$pictures = getPictures($country);
 	require('V/circuitCountry.html');
 }
-<<<<<<< HEAD
+
 
 function getPictures($country){
 	$host = "localhost";
@@ -111,6 +112,3 @@ function getPictures($country){
 	return $pictures;
 }
 ?>
-=======
-?>
->>>>>>> 80d59a3014673a7676ce7289b856a1a6115ba92a
