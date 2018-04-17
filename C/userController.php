@@ -4,7 +4,7 @@ function accueil(){
 
 	//require ("V/accueil.html");
 	//header('Location: V/accueil.html');
-	require('V/accueil.tpl');
+	require('V/accueil.html');
   //exit();
 
 }
@@ -47,7 +47,7 @@ function register(){
 function logout(){
 	$_SESSION['user']="";
 	$_SESSION['admin']="";
-	require('V/accueil.tpl');
+	require('V/accueil.html');
 }
 
 function displayPage($path){

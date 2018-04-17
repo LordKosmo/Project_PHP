@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 17 avr. 2018 à 04:40
+-- Généré le :  mar. 17 avr. 2018 à 08:10
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `picture` (
   `path` varchar(200) NOT NULL,
   `id_travel` int(11) NOT NULL,
   PRIMARY KEY (`id_picture`)
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `picture`
@@ -60,9 +60,22 @@ INSERT INTO `picture` (`id_picture`, `path`, `id_travel`) VALUES
 (23, 'V/images/Egypte/B_1_philae1.jpg', 4),
 (24, 'V/images/Egypte/578.jpg', 4),
 (25, 'V/images/Egypte/531841226_Temple-of-Ramesses-II--Abu-Simbel--Egypt.jpg', 4),
+(30, 'V/images/plaza.jpg', 5),
 (27, 'V/images/Egypte/Free-Download-Nile-River-HD-Wallpaper.jpg', 4),
 (28, 'V/images/Egypte/landscape_a7694bb7.jpg', 4),
-(29, 'V/images/Egypte/assouan.png', 4);
+(29, 'V/images/Egypte/assouan.png', 4),
+(31, 'V/images/Plaza/chambre.jpg', 5),
+(32, 'V/images/Plaza/hall.jpg', 5),
+(33, 'V/images/Plaza/jardin.jpg', 5),
+(34, 'V/images/Plaza/piscine.jpg', 5),
+(35, 'V/images/Plaza/resto.jpg', 5),
+(36, 'V/images/Plaza/sdb.jpg', 5),
+(37, 'V/images/GeorgeV/img1.jpeg', 6),
+(38, 'V/images/GeorgeV/gv2.jpg', 6),
+(39, 'V/images/GeorgeV/restoG.jpg', 6),
+(40, 'V/images/GeorgeV/piscineG.jpg', 6),
+(41, 'V/images/GeorgeV/hall.jpg', 6),
+(42, 'V/images/GeorgeV/lobby.jpg', 6);
 
 -- --------------------------------------------------------
 
@@ -75,9 +88,19 @@ CREATE TABLE IF NOT EXISTS `reserve` (
   `id_res` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
   `id_travel` int(11) NOT NULL,
-  `date_res` date NOT NULL,
+  `datebeg` date NOT NULL,
+  `dateend` date NOT NULL,
   PRIMARY KEY (`id_res`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `reserve`
+--
+
+INSERT INTO `reserve` (`id_res`, `id_user`, `id_travel`, `datebeg`, `dateend`) VALUES
+(1, 4, 1, '2018-04-17', '2018-04-24'),
+(3, 3, 1, '2018-04-17', '2018-04-18'),
+(4, 3, 4, '2018-05-17', '2018-04-24');
 
 -- --------------------------------------------------------
 
@@ -125,6 +148,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` text COLLATE utf8_bin NOT NULL,
   `login_user` text COLLATE utf8_bin NOT NULL,
   `pass` text COLLATE utf8_bin NOT NULL,
+  `admin` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -132,17 +156,17 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id_user`, `lastname`, `firsname`, `email`, `login_user`, `pass`) VALUES
-(1, 'DOS SANTOS', 'Julien', 'julien.dossantos@gmail.com', 'DOSSANTOS1', 'jdetu1'),
-(2, 'TABARE', 'Ruben', 'ruben.tabare@gmail.com', 'TABARE1', 'rtetu2'),
-(3, 'WANG', 'Antoine', 'AntoineWang@gmail.com', 'WANG1', 'rlXrBRAuJnsg'),
-(4, 'BUGIELSKI', 'Alexis', 'AlexisBugielski@gmail.com', 'BUGIELSKI1', 'baetu1'),
-(5, 'MONET', 'Gregoire', 'GregoireMonet@gmail.com', 'MONET1', 'gmetu1'),
-(6, 'WRIGHT', 'Bill', 'BillWright@gmail.com', 'WRIGHT1', 'bwetu1'),
-(7, 'ZUKERBERG', 'MARK', 'MarkZukerberg@gmail.com', 'ZUKERBERG1', 'mzetu1'),
-(8, 'CARON', 'Fabien', 'FabienCaron@gmail.com', 'CARON1', 'caetu1'),
-(9, 'CRESP', 'Vincent', 'VincentCresp@gmail.com', 'CRESP1', 'cvetu1'),
-(10, 'ASIMOV', 'Isaac', 'IsaacAsimovp@gmail.com', 'ASIMOV1', 'cvetu1');
+INSERT INTO `user` (`id_user`, `lastname`, `firsname`, `email`, `login_user`, `pass`, `admin`) VALUES
+(1, 'DOS SANTOS', 'Julien', 'julien.dossantos@gmail.com', 'DOSSANTOS1', 'jdetu1', NULL),
+(2, 'TABARE', 'Ruben', 'ruben.tabare@gmail.com', 'TABARE1', 'rtetu2', NULL),
+(3, 'WANG', 'Antoine', 'AntoineWang@gmail.com', 'WANG1', 'rlXrBRAuJnsg.', 1),
+(4, 'BUGIELSKI', 'Alexis', 'AlexisBugielski@gmail.com', 'BUGIELSKI1', 'baetu1', NULL),
+(5, 'MONET', 'Gregoire', 'GregoireMonet@gmail.com', 'MONET1', 'gmetu1', NULL),
+(6, 'WRIGHT', 'Bill', 'BillWright@gmail.com', 'WRIGHT1', 'bwetu1', NULL),
+(7, 'ZUKERBERG', 'MARK', 'MarkZukerberg@gmail.com', 'ZUKERBERG1', 'mzetu1', NULL),
+(8, 'CARON', 'Fabien', 'FabienCaron@gmail.com', 'CARON1', 'caetu1', NULL),
+(9, 'CRESP', 'Vincent', 'VincentCresp@gmail.com', 'CRESP1', 'cvetu1', NULL),
+(10, 'ASIMOV', 'Isaac', 'IsaacAsimovp@gmail.com', 'ASIMOV1', 'cvetu1', NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
