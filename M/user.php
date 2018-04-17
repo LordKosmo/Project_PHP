@@ -55,19 +55,32 @@ function connect(){
 }
 
 function reserveBDD($id_user,$id_travel,$datebeg,$dateend){
-	echo("Salut je fais la requete");
-	echo($id_travel);
 	$link = connect();
 	$req = "insert into reserve(id_user,id_travel,datebeg,dateend) values ('" .$id_user ."','" .$id_travel  . "','". $datebeg."','" .$dateend . "')";
 	$res = mysqli_query($link,$req);
 }
 
-function registerUser($name, $password){
+function registerUser($Lastname,$Firstname, $password, $email, $login){
 
 	$link = connect();
-	$req = "insert into users (name, pwd) values ('" . $name . "', '" . crypt($password,"rl") . "')";
+	$newpass =crypt($password,"rl");
+
+	$req = "insert into user (Lastname,Firstname,email,login_user,pass) values ('" . $Lastname . "', '" . $Firstname . "', '". $email . "', '". $login . "', '". $newpass . "')";
+	echo($req);
 	$res = mysqli_query($link, $req);
-	require('V/connexion.html');
+
+}
+function verifUniqueLogin($login){
+	$link = connect();
+	$req = "select login_user from user where login_user='". $login ."'";
+	$res = mysqli_query($link,$req);
+	if(mysqli_fetch_assoc($res)){
+		//There is already the sale ID
+		return false;
+	}else{
+		
+		return true;
+	}
 }
 
 function getPage($country){
@@ -87,7 +100,7 @@ function getPage($country){
 	}
 	$_SESSION['currentTravel'] = $title;
 	$pictures = getPictures($country);
-	require('V/circuitCountry.html');
+
 }
 
 function getPictures($country){
