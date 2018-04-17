@@ -117,10 +117,10 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 
-      <div class="item active">
+       <div class="item active">
         <img src="V/images/Danube/ringstrasse-naturhistorisches-museum-kunsthistorisches-museum-volksgarten-parlament-palais-epstein-40711-19to1.jpeg" alt="Chania" width="500" height="345">
         <div class="carousel-caption">
-          <h3>Evadez vous</h3>
+          <h3>Get Away</h3>
           <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
         </div>
       </div>
@@ -128,7 +128,7 @@
       <div class="item">
         <img src="V/images/Norvege/sognefjord-norway.jpg" alt="Chania" width="500" height="345">
         <div class="carousel-caption">
-          <h3>Liberez vous</h3>
+          <h3>Free Yourself</h3>
           <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
         </div>
       </div>
@@ -136,7 +136,7 @@
       <div class="item">
         <img src="V/images/Egypte/B_1_philae1.jpg" alt="Flower" width="500" height="345">
         <div class="carousel-caption">
-          <h3>Voyagez l'esprit leger</h3>
+          <h3>Travel the light spirit</h3>
           <p>Beatiful flowers in Kolymbari, Crete.</p>
         </div>
       </div>
@@ -575,18 +575,18 @@
 		-->
 		<section class="container-fluid contact">
 			<div class="container">
-				<h3 class="contactTitre">Contactez-nous</h3>
-				<p>Chez Bon Voyage nous savons que voyager est une aventure humaine mais également un engagement financier important pour vous. C'est pourquoi nous mettons un point d'honneur à prendre en compte chacune de vos attentes pour vous aider dans la préparation de votre séjour, circuit ou voyage sur mesure.</p>
+				<h3 class="contactTitre">Contact Us</h3>
+				<p>At Bon Voyage we know that traveling is a human adventure but also an important financial commitment for you. That's why we make it a point of honor to take into account each of your expectations to help you in the preparation of your stay, tour or tailor-made trip.</p>
 					
 				<form> <!--class="container"-->
 					<!--<label for="name">Nom</label>-->
 					<div class="col-ld-6 col-md-6 col-ms-12 col-xs-12">
-					<input type="text" id="name" placeholder="Votre nom">
-					</div>
-					<!--<label for="email">Email</label>-->
-					<div class="col-ld-6 col-md-6 col-ms-12 col-xs-12">
-					<input type="text" id="email" placeholder="Votre email">
-					</div>
+          <input type="text" id="name" placeholder="Your name">
+          </div>
+          <!--<label for="email">Email</label>-->
+          <div class="col-ld-6 col-md-6 col-ms-12 col-xs-12">
+          <input type="text" id="email" placeholder="Your email">
+          </div>
 					<div class="col-ld-12 col-md-12 col-ms-12 col-xs-12">
 					<input type="submit" class="button-3" value="OK">
 					</div>
