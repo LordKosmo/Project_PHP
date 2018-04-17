@@ -55,6 +55,7 @@ CREATE TABLE `travel` (
 -- Contenu de la table `travel`
 --
 
+<<<<<<< HEAD
 INSERT INTO `travel` (`id_travel`, `TITLE`, `subtitle`, `country`, `description`, `price`, `date_start`, `date_return`) VALUES
 (1, 'NORWAY', 'On the land of the Vikings', 'subtitle', 'True cultural discovery, you will discover the country of the vikings in all its splendor. From Oslo to Sognefjord via the famous Troll route, you will have the opportunity to see Norway s most beautiful fjords.', 5000, '2018-03-23', '2018-03-30'),
 (2, 'ITALY', 'Combined culture and nature', 'subtitle', 'Arbatax located in the east center of the island including a wild nature reserve integrated in a resort on the coast', 5, '2018-03-23', '2018-03-30'),
@@ -64,6 +65,17 @@ INSERT INTO `travel` (`id_travel`, `TITLE`, `subtitle`, `country`, `description`
 (6, 'FRANCE', 'Le George V', 'subtitle', 'The Four Seasons Hotel George V is one of those hotels that you probably do not need to present. Anchored since 1928 at 31 avenue George V in the 8th arrondissement just a stone s throw from the Champs Elysées, this establishment (built to the distinction of Palace in 2012) is an exceptional hotel, renowned throughout the world and with an irreproachable quality of service. ', 5, '2018-03-23', '2018-03-30'),
 (7, 'Australia', 'Novotel Sydney Darling Harbour', 'subtitle', 'A 3-minute walk from Harborside Shopping Center, Novotel Sydney Darling Harbor offers spacious rooms, some with stunning views of the Sydney skyline. It features a gym and an outdoor pool and tennis court. In addition, guests can enjoy 30 minutes of free Wi-Fi in the lobby per device and per day.', 5, '2018-03-23', '2018-03-30'),
 (8, 'Australia', 'The Westin Sydney', 'subtitle', 'Located in Sydney s central business district, near the lively Martin Place, The Westin Sydney offers an à la carte restaurant, a bar and access to a fitness center. Luxurious rooms with personalized interiors feature flat-screen TVs. Some offer stunning views of the city. Wi-Fi is free in public areas.', 5, '2018-03-23', '2018-03-30'),;
+=======
+INSERT INTO `travel` (`id_travel`, `TITLE`, `country`, `description`, `price`, `date_start`, `date_return`) VALUES
+(1, 'NORWAY', 'On the land of the Vikings', 'True cultural discovery, you will discover the country of the vikings in all its splendor. From Oslo to Sognefjord via the famous Troll route, you will have the opportunity to see Norway s most beautiful fjords.', 5000, '2018-03-23', '2018-03-30'),
+(2, 'ITALY', 'Combined culture and nature', 'Arbatax located in the east center of the island including a wild nature reserve integrated in a resort on the coast', 5, '2018-03-23', '2018-03-30'),
+(3, 'FRANCE', 'To conquer the East', 'From the city center to the European Parliament, passing through the imperial district of Neustadt, discover Strasbourg from a unique point of view, for a stroll along the water!', 5, '2018-03-23', '2018-03-30'),
+(4, 'EGYPT', 'The domain of the pharaohs', 'Egypt welcomes you with its mighty Nile and magnificent monuments, the beguiling desert and lush delta, and with its long past and welcoming, story-loving people.', 5, '2018-03-23', '2018-03-30'),
+(5, 'FRANCE', 'Le plaza athénée', 'The Plaza Athénée is part of the very closed circle of Parisian palaces. After 11 months of work, it reopened in September 2014, and we find everything that makes the soul of the hotel: classic and luxurious suites, a restaurant completely transformed and taken over by Alain Ducasse, the same upscale service that has made it famous, a large, refurbished interior courtyard, and still the Dior spa.', 5, '2018-03-23', '2018-03-30'),
+(6, 'FRANCE', 'Le George V', 'The Four Seasons Hotel George V is one of those hotels that you probably do not need to present. Anchored since 1928 at 31 avenue George V in the 8th arrondissement just a stone s throw from the Champs Elysées, this establishment (built to the distinction of Palace in 2012) is an exceptional hotel, renowned throughout the world and with an irreproachable quality of service. ', 5, '2018-03-23', '2018-03-30'),
+(7, 'Australia', 'Novotel Sydney Darling Harbour', 'A 3-minute walk from Harborside Shopping Center, Novotel Sydney Darling Harbor offers spacious rooms, some with stunning views of the Sydney skyline. It features a gym and an outdoor pool and tennis court. In addition, guests can enjoy 30 minutes of free Wi-Fi in the lobby per device and per day.', 5, '2018-03-23', '2018-03-30'),
+(8, 'Australia', 'The Westin Sydney', 'Located in Sydney s central business district, near the lively Martin Place, The Westin Sydney offers an à la carte restaurant, a bar and access to a fitness center. Luxurious rooms with personalized interiors feature flat-screen TVs. Some offer stunning views of the city. Wi-Fi is free in public areas.', 5, '2018-03-23', '2018-03-30');
+>>>>>>> 4017e71dfe2a5cc6959035b41248811e1ad74268
 
 -- --------------------------------------------------------
 
