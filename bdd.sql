@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 17 avr. 2018 à 04:40
--- Version du serveur :  5.7.19
--- Version de PHP :  5.6.31
+-- Client :  127.0.0.1
+-- Généré le :  Mar 17 Avril 2018 à 07:58
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -28,16 +26,14 @@ SET time_zone = "+00:00";
 -- Structure de la table `picture`
 --
 
-DROP TABLE IF EXISTS `picture`;
-CREATE TABLE IF NOT EXISTS `picture` (
-  `id_picture` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `picture` (
+  `id_picture` int(11) NOT NULL,
   `path` varchar(200) NOT NULL,
-  `id_travel` int(11) NOT NULL,
-  PRIMARY KEY (`id_picture`)
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+  `id_travel` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `picture`
+-- Contenu de la table `picture`
 --
 
 INSERT INTO `picture` (`id_picture`, `path`, `id_travel`) VALUES
@@ -70,13 +66,11 @@ INSERT INTO `picture` (`id_picture`, `path`, `id_travel`) VALUES
 -- Structure de la table `reserve`
 --
 
-DROP TABLE IF EXISTS `reserve`;
-CREATE TABLE IF NOT EXISTS `reserve` (
-  `id_res` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `reserve` (
+  `id_res` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_travel` int(11) NOT NULL,
-  `date_res` date NOT NULL,
-  PRIMARY KEY (`id_res`)
+  `date_res` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -85,20 +79,18 @@ CREATE TABLE IF NOT EXISTS `reserve` (
 -- Structure de la table `travel`
 --
 
-DROP TABLE IF EXISTS `travel`;
-CREATE TABLE IF NOT EXISTS `travel` (
-  `id_travel` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `travel` (
+  `id_travel` int(11) NOT NULL,
   `Country` varchar(100) COLLATE utf8_bin NOT NULL,
   `Title` text COLLATE utf8_bin NOT NULL,
   `description` text COLLATE utf8_bin NOT NULL,
   `price` int(11) NOT NULL,
   `date_start` date NOT NULL,
-  `date_return` date NOT NULL,
-  PRIMARY KEY (`id_travel`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `date_return` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Déchargement des données de la table `travel`
+-- Contenu de la table `travel`
 --
 
 INSERT INTO `travel` (`id_travel`, `Country`, `Title`, `description`, `price`, `date_start`, `date_return`) VALUES
@@ -117,22 +109,20 @@ INSERT INTO `travel` (`id_travel`, `Country`, `Title`, `description`, `price`, `
 -- Structure de la table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `id_user` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `user` (
+  `id_user` int(11) NOT NULL,
   `lastname` text COLLATE utf8_bin NOT NULL,
-  `firsname` text COLLATE utf8_bin NOT NULL,
+  `firstname` text COLLATE utf8_bin NOT NULL,
   `email` text COLLATE utf8_bin NOT NULL,
   `login_user` text COLLATE utf8_bin NOT NULL,
-  `pass` text COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `pass` text COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Déchargement des données de la table `user`
+-- Contenu de la table `user`
 --
 
-INSERT INTO `user` (`id_user`, `lastname`, `firsname`, `email`, `login_user`, `pass`) VALUES
+INSERT INTO `user` (`id_user`, `lastname`, `firstname`, `email`, `login_user`, `pass`) VALUES
 (1, 'DOS SANTOS', 'Julien', 'julien.dossantos@gmail.com', 'DOSSANTOS1', 'jdetu1'),
 (2, 'TABARE', 'Ruben', 'ruben.tabare@gmail.com', 'TABARE1', 'rtetu2'),
 (3, 'WANG', 'Antoine', 'AntoineWang@gmail.com', 'WANG1', 'rlXrBRAuJnsg'),
@@ -142,9 +132,61 @@ INSERT INTO `user` (`id_user`, `lastname`, `firsname`, `email`, `login_user`, `p
 (7, 'ZUKERBERG', 'MARK', 'MarkZukerberg@gmail.com', 'ZUKERBERG1', 'mzetu1'),
 (8, 'CARON', 'Fabien', 'FabienCaron@gmail.com', 'CARON1', 'caetu1'),
 (9, 'CRESP', 'Vincent', 'VincentCresp@gmail.com', 'CRESP1', 'cvetu1'),
-(10, 'ASIMOV', 'Isaac', 'IsaacAsimovp@gmail.com', 'ASIMOV1', 'cvetu1');
-COMMIT;
+(10, 'ASIMOV', 'Isaac', 'IsaacAsimovp@gmail.com', 'ASIMOV1', 'cvetu1'),
+(11, 'Wang', 'Antoine', 'antoinewang@live.fr', 'test', 'rl1IV0t8l4rcQ');
 
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `picture`
+--
+ALTER TABLE `picture`
+  ADD PRIMARY KEY (`id_picture`);
+
+--
+-- Index pour la table `reserve`
+--
+ALTER TABLE `reserve`
+  ADD PRIMARY KEY (`id_res`);
+
+--
+-- Index pour la table `travel`
+--
+ALTER TABLE `travel`
+  ADD PRIMARY KEY (`id_travel`);
+
+--
+-- Index pour la table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_user`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `picture`
+--
+ALTER TABLE `picture`
+  MODIFY `id_picture` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+--
+-- AUTO_INCREMENT pour la table `reserve`
+--
+ALTER TABLE `reserve`
+  MODIFY `id_res` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `travel`
+--
+ALTER TABLE `travel`
+  MODIFY `id_travel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT pour la table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
