@@ -20,11 +20,39 @@
 			document.getElementById("menuPetit").style.marginTop = "15px";
 			}
 		});
-		
+
 		function isValid(){
 			var doc = document.getElementById("f1");
-			if(doc.value=="-1"){
+			var dbeg = document.getElementById("datedeb");
+			var dend = document.getElementById("datefin");
+			var valid = true;
+			if(doc.value<1 || doc.value==""){
 				doc.style.borderColor="red";
+				document.getElementById("submit").style.display="none";
+				valid = false;
+			}
+			else{
+				doc.style.borderColor="#02b8dd";
+			}
+
+			if(dbeg.value=="jj/mm/aaaa" || dbeg.value==""){
+				dbeg.style.borderColor="red";
+				document.getElementById("submit").style.display="none";
+				valid = false;
+			}
+			else{
+				dbeg.style.borderColor="#02b8dd";
+			}
+			if(dend.value=="jj/mm/aaaa" || dend.value==""){
+				dend.style.borderColor="red";
+				document.getElementById("submit").style.display="none";
+				valid = false;
+			}
+			else{
+				dend.style.borderColor="#02b8dd";
+			}
+			if(valid){
+				document.getElementById("submit").style.display="block";
 			}
 		}
 	</script>
@@ -55,11 +83,11 @@
 						else
 							echo('<ul><h3>Reservation Hôtel George V</h3></ul>');
 						?>
-						Nombre de chambres<input type="text" value="" id="f1" name = "nbroom" onchange="isValid()">
-						Date Deb<input type="date" id="datedeb" name="datebeg">
-						Date end<input type="date" id="datefin" name="dateend">
+						Nombre de chambres<input type="number" value="" id="f1" name = "nbroom" onblur="isValid()">
+						Date Deb<input type="date" id="datedeb" name="datebeg" onblur="isValid()">
+						Date end<input type="date" id="datefin" name="dateend" onblur="isValid()">
 						<div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3" id = "bouton">
-							<input class="form-control" type="submit" value="Réserver" onclick="alert('Your reservation has been sent')">
+							<input id="submit" class="form-control" type="submit" value="Réserver" onclick="alert('Your reservation has been sent')">
 						</div>
 							<!--<li>Prix : 1200/nuit</li>
 							<li id="ligne">Adresse : 31 Av George V | 8th Arr., 75008 Paris, France (Champs-Élysées)</li>

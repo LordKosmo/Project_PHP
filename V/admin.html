@@ -2,10 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="V/CSS/bootstrap.min.css">
+		<link rel="stylesheet" href="CSS/bootstrap.min.css">
 		<link href="V/CSS/styles.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
-
+		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -29,7 +29,7 @@
 			height: 600px;
 			margin: auto;
 			}
-
+			
 			@media only screen and (max-device-width:640px), only screen and (max-width:640px) {
 				.carousel-inner > .item > img, .carousel-inner > .item > a > img {
 					width: 100%;
@@ -80,53 +80,38 @@
 			fill:red;
 			stroke: black;
 			}
-
-
+			
+			
 			#menuPetit{
 				margin-top:15px;
 			}
 		</style>
-
-
-
+		
 		<title>Bon Voyage - Agence de Voyages en ligne</title>
 	</head>
-
+    
     <body>
-        <?php require("menu.html"); ?>
-
+		<?php require("menu.html") ?>
+                
 		<section class="container-fluid contact">
-			<form method="post" action="index.php?controle=userController&action=register">
-				<div class="col-ld-12 col-md-12 col-ms-12 col-xs-12">
-					<input type="text" name="Lastname" id="Lastname" placeholder="LastName" onblur="isRegisterValid()">
-					<input type="text" name="Firstname" id="Firstname" placeholder="FirstName"  onblur="isRegisterValid()">
-					<input type="email" name="email" id="email" placeholder="Email" onblur="isRegisterValid()">
-					<input type="login" name="login" id="login" placeholder="log"  onblur="isRegisterValid()">
-					<input type="password" name="password" id="password" placeholder="Password"  >
-					<input type="password" name="validatePassword" id="id_validatePassword" placeholder="Validate Password"  >
-				</div>
-				<!--<label for="email">Email</label>-->
-				<!--<div class="col-ld-6 col-md-6 col-ms-12 col-xs-12">
-					<input type="password" name="password" id="password" placeholder="Password" >
-					<input type="password" name="validatePassword" id="validatePassword" placeholder="Validate Password" >
-				</div>
-				<div class="col-ld-6 col-md-6 col-ms-12 col-xs-12">
-					<input type="password" name="validatePassword" id="validatePassword" placeholder="Validate Password" >
-				</div>-->
-				<div class="col-ld-12 col-md-12 col-ms-12 col-xs-12">
-					<input type="submit" class="button-3" value="Submit">
-				</div>
-			</form>
+			<div class="container">
+				<?php
+				foreach($reserve as $res){
+					echo('<h3 class="contactTitre">'. $res['title'] . ', ' . $res['login_user'] . ', ' . $res['datebeg'] . ', ' . $res['dateend'] .'</h3>');
+					echo('<a href="index.php?controle=userController&action=deleteReservation&id="' . $res['id_res']');
+				}
+				?>
+			</div>
 		</section>
-
+        
         <footer>
-            <div class="wrapper">
+            <div class="wrapper"> 
                 <h1> Bon Voyage<span class="orange">.</span></h1>
-
+                
                 <div class="copyright">Copyright © 2016. Tous droits réservés.
                 </div>
             </div>
         </footer>
     </body>
-
+          
 </html>
