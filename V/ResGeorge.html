@@ -35,16 +35,16 @@
 				<div class = "row">
 					<div class="col-md-6 col-lg-6 col-sm-8 col-xs-12">
 						<?php
-						if(isset($picture))
-							echo('<img src = "' . $picture . '" class="img-responsive"/>');
+						if(isset($_SESSION['travelPicture']))
+							echo('<img src = "' . $_SESSION['travelPicture'] . '" class="img-responsive"/>');
 						else
 							echo('<img src = "V/images/georgesV.jpg" class="img-responsive"/>');
 						?>
 					</div>
 					<div class="col-md-6 col-lg-6 col-sm-4 col-xs-12"id ="desc" >
 						<?php
-						if(isset($travel))
-							echo('<ul><h3>Reservation ' . $travel . '</h3></ul>');
+						if(isset($_SESSION['currentTravel']))
+							echo('<ul><h3>Reservation ' . $_SESSION['currentTravel'] . '</h3></ul>');
 						else
 							echo('<ul><h3>Reservation Hôtel George V</h3></ul>');
 						?>

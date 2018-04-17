@@ -52,15 +52,38 @@ function getPage($country){
 	$pwd = "";
 	$db = "bdd";
 	$link = mysqli_connect($host, $user, $pwd, $db);
-	$req = "select title, description, price from travel where title='" . $country . "'";
+	$req = "select id_travel, title, description, price from travel where title='" . $country . "'";
 	echo($req);
 	$res = mysqli_query($link, $req);
 	if($data = mysqli_fetch_assoc($res)){
 		$title = $data['title'];
 		$price = $data['price'];
 		$description = $data['description'];
-		//$country = 'fjord';
+		$_SESSION['id_travel'] = $data['id_travel'];
 	}
+	$_SESSION['currentTravel'] = $title;
+	$pictures = getPictures($country);
 	require('V/circuitCountry.html');
+}
+
+function getPictures($country){
+	$host = "localhost";
+	$user = "root";
+	$pwd = "";
+	$db = "bdd";
+	$link = mysqli_connect($host, $user, $pwd, $db);
+	$req = "select path from picture natural join travel where title='" . $country . "'";
+	echo($req);
+	$res = mysqli_query($link, $req);
+	$pictures = array();
+	$i=0;
+	while($data = mysqli_fetch_assoc($res)){
+		echo($data['path']);
+		$pictures[$i] = $data['path'];
+		//$country = 'fjord';
+		$i++;
+	}
+	$_SESSION['travelPicture'] = $pictures[0];
+	return $pictures;
 }
 ?>

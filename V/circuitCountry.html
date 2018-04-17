@@ -93,7 +93,7 @@
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
-
+						<!--
 						<div class="item active">
 							<img src="V/images/Norvege/paysages-norvege-timelapse-1.jpg" alt="Chania" width="500" height="345">
 						</div>
@@ -121,7 +121,24 @@
 						<div class="item">
 							<img src="V/images/Norvege/Bay-Fjord-Norway-forest-river-mountains-clouds_1600x1200.jpg" alt="Flower" width="500" height="345">
 						</div>
-
+						-->
+						<?php
+							if(isset($pictures)){
+								$i = 0;
+								foreach($pictures as $pic){
+									//echo($pic);
+									if($i==0){
+										echo('<div class="item active">');
+									}
+									else{
+										echo('<div class="item">');
+									}
+										echo('<img src="' . $pic . '" alt="Chania" width="500" height="345">');
+									echo('</div>');
+									$i++;
+								}
+							}
+						?>
 					</div>
 
 					<!-- Left and right controls -->
