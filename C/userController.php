@@ -81,7 +81,7 @@ function reserve(){
 	reserveBDD($id_user,$id_travel,$datebeg,$dateend);
 
 
-	//require("V/accueil.htlm");
+	require("V/accueil.html");
 }
 
 ?>
