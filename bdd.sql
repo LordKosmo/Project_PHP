@@ -2,10 +2,10 @@
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 17 avr. 2018 à 08:10
--- Version du serveur :  5.7.19
--- Version de PHP :  5.6.31
+-- Client :  127.0.0.1
+-- Généré le :  Mar 17 Avril 2018 à 14:31
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -29,9 +29,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `picture` (
   `id_picture` int(11) NOT NULL,
   `path` varchar(200) NOT NULL,
-  `id_travel` int(11) NOT NULL,
-  PRIMARY KEY (`id_picture`)
-) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
   `id_travel` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -87,20 +84,20 @@ CREATE TABLE `reserve` (
   `id_user` int(11) NOT NULL,
   `id_travel` int(11) NOT NULL,
   `datebeg` date NOT NULL,
-  `dateend` date NOT NULL,
-  PRIMARY KEY (`id_res`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `dateend` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Déchargement des données de la table `reserve`
+-- Contenu de la table `reserve`
 --
 
 INSERT INTO `reserve` (`id_res`, `id_user`, `id_travel`, `datebeg`, `dateend`) VALUES
 (1, 4, 1, '2018-04-17', '2018-04-24'),
 (3, 3, 1, '2018-04-17', '2018-04-18'),
-(4, 3, 4, '2018-05-17', '2018-04-24');
-  `date_res` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+(4, 3, 4, '2018-05-17', '2018-04-24'),
+(5, 3, 1, '2010-03-23', '2010-12-20'),
+(6, 3, 1, '1231-02-01', '3211-04-13'),
+(7, 3, 1, '1231-02-01', '3211-04-13');
 
 -- --------------------------------------------------------
 
@@ -145,17 +142,14 @@ CREATE TABLE `user` (
   `email` text COLLATE utf8_bin NOT NULL,
   `login_user` text COLLATE utf8_bin NOT NULL,
   `pass` text COLLATE utf8_bin NOT NULL,
-  `admin` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-  `pass` text COLLATE utf8_bin NOT NULL
+  `admin` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Contenu de la table `user`
 --
 
-INSERT INTO `user` (`id_user`, `lastname`, `firsname`, `email`, `login_user`, `pass`, `admin`) VALUES
+INSERT INTO `user` (`id_user`, `lastname`, `firstname`, `email`, `login_user`, `pass`, `admin`) VALUES
 (1, 'DOS SANTOS', 'Julien', 'julien.dossantos@gmail.com', 'DOSSANTOS1', 'jdetu1', NULL),
 (2, 'TABARE', 'Ruben', 'ruben.tabare@gmail.com', 'TABARE1', 'rtetu2', NULL),
 (3, 'WANG', 'Antoine', 'AntoineWang@gmail.com', 'WANG1', 'rlXrBRAuJnsg.', 1),
@@ -165,20 +159,9 @@ INSERT INTO `user` (`id_user`, `lastname`, `firsname`, `email`, `login_user`, `p
 (7, 'ZUKERBERG', 'MARK', 'MarkZukerberg@gmail.com', 'ZUKERBERG1', 'mzetu1', NULL),
 (8, 'CARON', 'Fabien', 'FabienCaron@gmail.com', 'CARON1', 'caetu1', NULL),
 (9, 'CRESP', 'Vincent', 'VincentCresp@gmail.com', 'CRESP1', 'cvetu1', NULL),
-(10, 'ASIMOV', 'Isaac', 'IsaacAsimovp@gmail.com', 'ASIMOV1', 'cvetu1', NULL);
-COMMIT;
-INSERT INTO `user` (`id_user`, `lastname`, `firstname`, `email`, `login_user`, `pass`) VALUES
-(1, 'DOS SANTOS', 'Julien', 'julien.dossantos@gmail.com', 'DOSSANTOS1', 'jdetu1'),
-(2, 'TABARE', 'Ruben', 'ruben.tabare@gmail.com', 'TABARE1', 'rtetu2'),
-(3, 'WANG', 'Antoine', 'AntoineWang@gmail.com', 'WANG1', 'rlXrBRAuJnsg'),
-(4, 'BUGIELSKI', 'Alexis', 'AlexisBugielski@gmail.com', 'BUGIELSKI1', 'baetu1'),
-(5, 'MONET', 'Gregoire', 'GregoireMonet@gmail.com', 'MONET1', 'gmetu1'),
-(6, 'WRIGHT', 'Bill', 'BillWright@gmail.com', 'WRIGHT1', 'bwetu1'),
-(7, 'ZUKERBERG', 'MARK', 'MarkZukerberg@gmail.com', 'ZUKERBERG1', 'mzetu1'),
-(8, 'CARON', 'Fabien', 'FabienCaron@gmail.com', 'CARON1', 'caetu1'),
-(9, 'CRESP', 'Vincent', 'VincentCresp@gmail.com', 'CRESP1', 'cvetu1'),
-(10, 'ASIMOV', 'Isaac', 'IsaacAsimovp@gmail.com', 'ASIMOV1', 'cvetu1'),
-(11, 'Wang', 'Antoine', 'antoinewang@live.fr', 'test', 'rl1IV0t8l4rcQ');
+(10, 'ASIMOV', 'Isaac', 'IsaacAsimovp@gmail.com', 'ASIMOV1', 'cvetu1', NULL),
+(12, 'yo', 'yo', 'azadzd@gmail.com', 'az', 'rl7HypOhTM4Uo', NULL),
+(13, 'Julien', 'Dos Santos', 'julien.dossantos@gmail.com', 'judoetu1', 'rl1IV0t8l4rcQ', NULL);
 
 --
 -- Index pour les tables exportées
@@ -216,12 +199,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `picture`
 --
 ALTER TABLE `picture`
-  MODIFY `id_picture` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_picture` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT pour la table `reserve`
 --
 ALTER TABLE `reserve`
-  MODIFY `id_res` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `travel`
 --
@@ -231,7 +214,7 @@ ALTER TABLE `travel`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
