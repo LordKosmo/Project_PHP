@@ -2,17 +2,10 @@
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
-<<<<<<< HEAD
 -- Hôte : 127.0.0.1:3306
 -- Généré le :  mar. 17 avr. 2018 à 08:10
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
-=======
--- Client :  127.0.0.1
--- Généré le :  Mar 17 Avril 2018 à 07:58
--- Version du serveur :  5.7.14
--- Version de PHP :  5.6.25
->>>>>>> 7044307b97ebcd79b3f5928d9134402d71914acf
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -36,14 +29,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `picture` (
   `id_picture` int(11) NOT NULL,
   `path` varchar(200) NOT NULL,
-<<<<<<< HEAD
   `id_travel` int(11) NOT NULL,
   PRIMARY KEY (`id_picture`)
 ) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
-=======
   `id_travel` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
->>>>>>> 7044307b97ebcd79b3f5928d9134402d71914acf
 
 --
 -- Contenu de la table `picture`
@@ -96,7 +86,6 @@ CREATE TABLE `reserve` (
   `id_res` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_travel` int(11) NOT NULL,
-<<<<<<< HEAD
   `datebeg` date NOT NULL,
   `dateend` date NOT NULL,
   PRIMARY KEY (`id_res`)
@@ -110,10 +99,8 @@ INSERT INTO `reserve` (`id_res`, `id_user`, `id_travel`, `datebeg`, `dateend`) V
 (1, 4, 1, '2018-04-17', '2018-04-24'),
 (3, 3, 1, '2018-04-17', '2018-04-18'),
 (4, 3, 4, '2018-05-17', '2018-04-24');
-=======
   `date_res` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
->>>>>>> 7044307b97ebcd79b3f5928d9134402d71914acf
 
 -- --------------------------------------------------------
 
@@ -157,21 +144,17 @@ CREATE TABLE `user` (
   `firstname` text COLLATE utf8_bin NOT NULL,
   `email` text COLLATE utf8_bin NOT NULL,
   `login_user` text COLLATE utf8_bin NOT NULL,
-<<<<<<< HEAD
   `pass` text COLLATE utf8_bin NOT NULL,
   `admin` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-=======
   `pass` text COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
->>>>>>> 7044307b97ebcd79b3f5928d9134402d71914acf
 
 --
 -- Contenu de la table `user`
 --
 
-<<<<<<< HEAD
 INSERT INTO `user` (`id_user`, `lastname`, `firsname`, `email`, `login_user`, `pass`, `admin`) VALUES
 (1, 'DOS SANTOS', 'Julien', 'julien.dossantos@gmail.com', 'DOSSANTOS1', 'jdetu1', NULL),
 (2, 'TABARE', 'Ruben', 'ruben.tabare@gmail.com', 'TABARE1', 'rtetu2', NULL),
@@ -184,7 +167,6 @@ INSERT INTO `user` (`id_user`, `lastname`, `firsname`, `email`, `login_user`, `p
 (9, 'CRESP', 'Vincent', 'VincentCresp@gmail.com', 'CRESP1', 'cvetu1', NULL),
 (10, 'ASIMOV', 'Isaac', 'IsaacAsimovp@gmail.com', 'ASIMOV1', 'cvetu1', NULL);
 COMMIT;
-=======
 INSERT INTO `user` (`id_user`, `lastname`, `firstname`, `email`, `login_user`, `pass`) VALUES
 (1, 'DOS SANTOS', 'Julien', 'julien.dossantos@gmail.com', 'DOSSANTOS1', 'jdetu1'),
 (2, 'TABARE', 'Ruben', 'ruben.tabare@gmail.com', 'TABARE1', 'rtetu2'),
@@ -201,7 +183,6 @@ INSERT INTO `user` (`id_user`, `lastname`, `firstname`, `email`, `login_user`, `
 --
 -- Index pour les tables exportées
 --
->>>>>>> 7044307b97ebcd79b3f5928d9134402d71914acf
 
 --
 -- Index pour la table `picture`
