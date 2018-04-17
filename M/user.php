@@ -7,13 +7,13 @@ function login($login_user, $password){
 	$db = "labphp";
 	$link = mysqli_connect($host, $user, $pwd, $db);
 	*/
-	echo($login_user . PHP_EOL);
+	//echo($login_user . PHP_EOL);
 	//echo($password);
-	echo(crypt($password,"rl"));
+	//echo(crypt($password,"rl"));
 	$link = connect();
 	//echo($login_user);
 	$req = "select id_user, login_user, pass, admin from user where login_user='$login_user'";
-	echo($req);
+	//echo($req);
 	$res = mysqli_query($link, $req);
 
 	if($data = mysqli_fetch_assoc($res)){
@@ -27,7 +27,7 @@ function login($login_user, $password){
 					$_SESSION['admin']=$data['admin'];
 				else
 					$_SESSION['admin']="";
-				echo ("Welcome ". $data['admin']);
+				//echo ("Welcome ". $data['admin']);
 				if(isset($_SESSION['nextPath']) && $_SESSION['nextPath'] != ""){
 					$path = $_SESSION['nextPath'];
 					$_SESSION['nextPath'] = "";
@@ -50,12 +50,12 @@ function login($login_user, $password){
 }
 
 function connect(){
-		$host = "localhost";
-		$user = "root";
-		$pwd = "";
-		$db = "bdd";
-		$link = mysqli_connect($host, $user, $pwd, $db);
-		return $link;
+	$host = "localhost";
+	$user = "root";
+	$pwd = "";
+	$db = "bdd";
+	$link = mysqli_connect($host, $user, $pwd, $db);
+	return $link;
 }
 
 function reserveBDD($id_user,$id_travel,$datebeg,$dateend){
@@ -70,7 +70,7 @@ function registerUser($Lastname,$Firstname, $password, $email, $login){
 	$newpass =crypt($password,"rl");
 
 	$req = "insert into user (Lastname,Firstname,email,login_user,pass) values ('" . $Lastname . "', '" . $Firstname . "', '". $email . "', '". $login . "', '". $newpass . "')";
-	echo($req);
+	//echo($req);
 	$res = mysqli_query($link, $req);
 
 }
@@ -94,7 +94,7 @@ function getPage($country){
 	$db = "bdd";
 	$link = mysqli_connect($host, $user, $pwd, $db);
 	$req = "select id_travel, title, description, price from travel where title='" . $country . "'";
-	echo($req);
+	//echo($req);
 	$res = mysqli_query($link, $req);
 	if($data = mysqli_fetch_assoc($res)){
 		$title = $data['title'];
@@ -114,12 +114,12 @@ function getPictures($country){
 	$db = "bdd";
 	$link = mysqli_connect($host, $user, $pwd, $db);
 	$req = "select path from picture natural join travel where title='" . $country . "'";
-	echo($req);
+	//echo($req);
 	$res = mysqli_query($link, $req);
 	$pictures = array();
 	$i=0;
 	while($data = mysqli_fetch_assoc($res)){
-		echo($data['path']);
+		//echo($data['path']);
 		$pictures[$i] = $data['path'];
 		//$country = 'fjord';
 		$i++;
@@ -144,7 +144,7 @@ function getUserReservation(){
 function deleteUserReservation($idres){
 	$link = connect();
 	$req = "delete from reserve where id_res=" . $idres;
-	echo($req);
+	//echo($req);
 	$res = mysqli_query($link, $req);
 }
 ?>

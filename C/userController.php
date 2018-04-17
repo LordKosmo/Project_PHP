@@ -83,8 +83,8 @@ function test(){
 
 function reserve(){
 	require("M/user.php");
-	echo("reservation en cours");
-	var_dump( $_SESSION);
+	//echo("reservation en cours");
+	//var_dump( $_SESSION);
 	$id_user = $_SESSION['user'];
 	$id_travel=$_SESSION['id_travel'];
 	$datebeg =$_POST['datebeg'];
@@ -103,7 +103,7 @@ function getReservation(){
 }
 
 function deleteReservation($path){
-	echo("PATH=" . $path);
+	//echo("PATH=" . $path);
 	require("M/user.php");
 	//$idres = isset($_POST['id'])?$_POST['id']:"";
 	deleteUserReservation($path);
