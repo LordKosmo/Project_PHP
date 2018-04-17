@@ -26,13 +26,19 @@ function displayConnection(){
 function register(){
 	require("M/user.php");
 	//foreach($_POST as $key => $val) echo '$_POST["'.$key.'"]='.$val.'<br />';
-	$name = isset($_POST['name'])?$_POST['name']:"";
+	$Lastname = isset($_POST['Lastname'])?$_POST['Lastname']:"";
+	$Firstname = isset($_POST['Firstname'])?$_POST['Firstname']:"";
+	$email = isset($_POST['email'])?$_POST['email']:"";
+	$login = isset($_POST['login'])?$_POST['login']:"";
 	$pwd = isset($_POST['password'])?$_POST['password']:"";
 	$vpwd = isset($_POST['validatePassword'])?$_POST['validatePassword']:"";
-	if($pwd==$vpwd)
-		registerUser($name, $pwd);
-	else
+	if($pwd==$vpwd && verifUniqueLogin($login)){
+
+		registerUser($Lastname,$Firstname,$pwd,$email,$login);
+		require('V/connexion.html');
+	}else{
 		require('V/registration.html');
+	}
 }
 function logout(){
 	$_SESSION['user']="";
@@ -47,6 +53,7 @@ function displayCountry(){
 	$country = $_GET['country'];
 	require('M/user.php');
 	getPage($country);
+	//require('V/circuitCountry.html');
 }
 
 
