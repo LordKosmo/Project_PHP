@@ -23,6 +23,10 @@ function displayConnection(){
 	require('V/connexion.html');
 }
 
+function displayPayment(){
+	require('V/payment.html');
+}
+
 function register(){
 	require("M/user.php");
 	//foreach($_POST as $key => $val) echo '$_POST["'.$key.'"]='.$val.'<br />';
@@ -88,7 +92,7 @@ function reserve(){
 	reserveBDD($id_user,$id_travel,$datebeg,$dateend);
 
 
-	require("V/accueil.html");
+	require("V/payment.html");
 }
 
 function getReservation(){
