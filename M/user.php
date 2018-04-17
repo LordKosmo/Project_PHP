@@ -104,7 +104,7 @@ function getPage($country){
 	}
 	$_SESSION['currentTravel'] = $title;
 	$pictures = getPictures($country);
-
+	require('V/circuitCountry.html');
 }
 
 function getPictures($country){
