@@ -22,16 +22,16 @@
 		});
 	</script>
 		<title>Bon Voyage - Agence de Voyages en ligne</title>
-		
+
 	</head>
 
 	<body>
 		<?php require("menu.html"); ?>
         </header>
-		
-		
+
+
 		<section class="container">
-			<form method="post" action="index.php?controle=userController&action=accueil">
+			<form method="post" action="index.php?controle=userController&action=reserve">
 				<div class = "row">
 					<div class="col-md-6 col-lg-6 col-sm-8 col-xs-12">
 						<?php
@@ -48,8 +48,9 @@
 						else
 							echo('<ul><h3>Reservation Hôtel George V</h3></ul>');
 						?>
-						Nombre de chambres<input type="text" value="" id="f1">
-						Nombre de nuits<input type="text" id="example-text-input">
+						Nombre de chambres<input type="text" value="" id="f1" name = "nbroom">
+						Date Deb<input type="date" id="datedeb" name="datedeb">
+						Date end<input type="date" id="datefin" name="dateend">
 						<div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3" id = "bouton">
 							<input class="form-control" type="submit" value="Réserver" onclick="alert('Your reservation has been sent')">
 						</div>
@@ -61,9 +62,9 @@
 			</form>
 		</section>
 		<footer>
-            <div class="wrapper"> 
+            <div class="wrapper">
                 <h1 class="col-md-12 col-lg-12 col-sm-12 col-xs-12"> Bon Voyage<span class="orange">.</span></h1>
-                
+
                 <div class="copyright" class="col-md-8 col-lg-8 col-sm-12 col-xs-12">Copyright © 2017. Tous droits réservés.
                 </div>
             </div>

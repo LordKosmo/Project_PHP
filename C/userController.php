@@ -34,16 +34,6 @@ function register(){
 	else
 		require('V/registration.html');
 }
-
-function test(){
-	//echo("It finally works");
-	require("M/user.php");
-	//foreach($_POST as $key => $val) echo '$_POST["'.$key.'"]='.$val.'<br />';
-	$name = isset($_POST['name'])?$_POST['name']:"";
-	$pwd = isset($_POST['password'])?$_POST['password']:"";
-	login($name, $pwd);
-}
-
 function logout(){
 	$_SESSION['user']="";
 	require('V/accueil.tpl');
@@ -64,10 +54,36 @@ function verifUtilisateur(){
 	$login=isset($_POST['Login'])?$_POST['Login']:"tapez votre login";
 	$passe=isset($_POST['Password'])?$_POST['Password']:"tapez votre passe";
 	require ("M/Ok.php");
-	if (verifLoginBd($login, $passe)) 
+	if (verifLoginBd($login, $passe))
 		echo ("ok");
-	else 
+	else
 		echo ("ko");
+}
+
+function test(){
+	//echo("It finally works");
+	require("M/user.php");
+	//foreach($_POST as $key => $val) echo '$_POST["'.$key.'"]='.$val.'<br />';
+	$name = isset($_POST['name'])?$_POST['name']:"";
+	$pwd = isset($_POST['password'])?$_POST['password']:"";
+	login($name, $pwd);
+}
+
+function reserve(){
+	require("M/user.php");
+	echo("reservation en cours");
+	echo($_POST);
+	$id_user = "";
+	$id_travel="";
+	$datedeb ="";
+	$dateres="";
+
+	reserveBDD($id_user,$id_travel,$datedeb,$dateres);
+	/*
+
+*/
+
+	//require("V/accueil.htlm");
 }
 
 ?>
