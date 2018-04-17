@@ -72,16 +72,14 @@ function test(){
 function reserve(){
 	require("M/user.php");
 	echo("reservation en cours");
-	echo($_POST);
+	var_dump( $_SESSION);
 	$id_user = $_SESSION['user'];
-	$id_travel="";
+	$id_travel=$_SESSION['id_travel'];
 	$datebeg =$_POST['datebeg'];
 	$dateend = $_POST['dateend'];;
 
-	reserveBDD($id_user,$id_travel,$datedeb,$dateres);
-	/*
+	reserveBDD($id_user,$id_travel,$datebeg,$dateend);
 
-*/
 
 	//require("V/accueil.htlm");
 }
