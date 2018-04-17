@@ -89,7 +89,10 @@ function getPage($country){
 	$pictures = getPictures($country);
 	require('V/circuitCountry.html');
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9ddde2beff649930912c03fdd05c8da086fe1674
 
 function getPictures($country){
 	$host = "localhost";
