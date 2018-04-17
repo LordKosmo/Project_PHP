@@ -86,7 +86,8 @@ function reserve(){
 
 function getReservation(){
 	require("M/user.php");
-	getUserReservation();
+	$reserve = getUserReservation();
+	require("V/admin.html");
 }
 
 ?>

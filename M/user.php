@@ -112,6 +112,15 @@ function getPictures($country){
 }
 
 function getUserReservation(){
-	
+	$link = connect();
+	$req = "select id_res, login_user, title, datebeg, dateend from reserve natural join travel natural join user";
+	$res = mysqli_query($link, $req);
+	$reserve = array();
+	$i=0;
+	while($data = mysqli_fetch_assoc($res)){
+		$reserve[$i] = $data;
+		$i++;
+	}
+	return $reserve;
 }
 ?>

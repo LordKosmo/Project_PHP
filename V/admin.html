@@ -95,7 +95,12 @@
                 
 		<section class="container-fluid contact">
 			<div class="container">
-				<h3 class="contactTitre">Contactez-nous</h3>
+				<?php
+				foreach($reserve as $res){
+					echo('<h3 class="contactTitre">'. $res['title'] . ', ' . $res['login_user'] . ', ' . $res['datebeg'] . ', ' . $res['dateend'] .'</h3>');
+					echo('<a href="index.php?controle=userController&action=deleteReservation&id="' . $res['id_res']');
+				}
+				?>
 			</div>
 		</section>
         
