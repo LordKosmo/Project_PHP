@@ -73,10 +73,10 @@ function reserve(){
 	require("M/user.php");
 	echo("reservation en cours");
 	echo($_POST);
-	$id_user = "";
+	$id_user = $_SESSION['user'];
 	$id_travel="";
-	$datedeb ="";
-	$dateres="";
+	$datebeg =$_POST['datebeg'];
+	$dateend = $_POST['dateend'];;
 
 	reserveBDD($id_user,$id_travel,$datedeb,$dateres);
 	/*
