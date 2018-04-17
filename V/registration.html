@@ -88,7 +88,58 @@
 		</style>
 
 
+		<script>
+		function isAllValid(){
 
+			if(!isLastnameValid()){
+
+			}
+		}
+		function isLastnameValid(){
+			var Lastname = document.getElementById("Lastname");
+		/*	var Firstname = document.getElementById("Firstname");
+			var email = document.getElementById("email");
+			var login = document.getElementById("login");
+
+			*/
+			if(Lastname.value==""){
+				Lastname.style.borderColor="red";
+				document.getElementById("submit").style.display="none";
+				return false;
+			}else{
+				doc.style.borderColor="#02b8dd";
+				return true;
+			}
+/*
+			if(Firstname.value==""){
+				Firstname.style.borderColor="red";
+				document.getElementById("submit").style.display="none";
+				valid = false;
+			}else{
+				doc.style.borderColor="#02b8dd";
+			}
+			*/
+		/*
+			if(){
+				email.style.borderColor="red";
+				document.getElementById("submit").style.display="none";
+				valid = false;
+			}	else{
+				doc.style.borderColor="#02b8dd";
+			}*/
+/*
+			if(login.value==""){
+				login.style.borderColor="red";
+				document.getElementById("submit").style.display="none";
+				valid = false;
+			}
+			else{
+				doc.style.borderColor="#02b8dd";
+			}
+
+		*/
+	}
+		</script>
 		<title>Bon Voyage - Agence de Voyages en ligne</title>
 	</head>
 
@@ -98,7 +149,7 @@
 		<section class="container-fluid contact">
 			<form method="post" action="index.php?controle=userController&action=register">
 				<div class="col-ld-12 col-md-12 col-ms-12 col-xs-12">
-					<input type="text" name="Lastname" id="Lastname" placeholder="LastName" onblur="isRegisterValid()">
+					<input type="text" name="Lastname" id="Lastname" placeholder="LastName" onchange="isRegisterValid()">
 					<input type="text" name="Firstname" id="Firstname" placeholder="FirstName"  onblur="isRegisterValid()">
 					<input type="email" name="email" id="email" placeholder="Email" onblur="isRegisterValid()">
 					<input type="login" name="login" id="login" placeholder="log"  onblur="isRegisterValid()">
@@ -114,7 +165,7 @@
 					<input type="password" name="validatePassword" id="validatePassword" placeholder="Validate Password" >
 				</div>-->
 				<div class="col-ld-12 col-md-12 col-ms-12 col-xs-12">
-					<input type="submit" class="button-3" value="Submit">
+					<input id ="submit" type="submit" class="button-3" value="Submit">
 				</div>
 			</form>
 		</section>
