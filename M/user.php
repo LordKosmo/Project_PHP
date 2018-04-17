@@ -47,6 +47,20 @@ function registerUser($name, $password){
 }
 
 function getPage($country){
+	$host = "localhost";
+	$user = "root";
+	$pwd = "";
+	$db = "bdd";
+	$link = mysqli_connect($host, $user, $pwd, $db);
+	$req = "select title, description, price from travel where title='" . $country . "'";
+	echo($req);
+	$res = mysqli_query($link, $req);
+	if($data = mysqli_fetch_assoc($res)){
+		$title = $data['title'];
+		$price = $data['price'];
+		$description = $data['description'];
+		//$country = 'fjord';
+	}
 	require('V/circuitCountry.html');
 }
 ?>
